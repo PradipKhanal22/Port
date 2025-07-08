@@ -62,6 +62,20 @@
                 transform: translateY(0px);
             }
         }
+            .skill-bar {
+            height: 10px;
+            background-color: #2c2f4a;
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background-color: #FF4500;
+            width: 0;
+            border-radius: 9999px;
+            transition: width 1.5s ease;
+        }
     </style>
 </head>
 
@@ -156,104 +170,104 @@
 
     <!-- Skills Section -->
     <section id="skills" class="min-h-screen py-20 px-12 bg-[rgb(34,34,41)]">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-[#FF4500] text-3xl font-bold mb-2 animate__animated animate__fadeInDown">MY SKILLS</h2>
-            <div class="w-20 h-1 bg-[#FF4500] mb-12 animate__animated animate__fadeInDown"></div>
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-[#FF4500] text-3xl font-bold mb-2 animate__animated animate__fadeInDown">MY SKILLS</h2>
+        <div class="w-20 h-1 bg-[#FF4500] mb-12 animate__animated animate__fadeInDown"></div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="animate__animated animate__fadeInLeft">
-                    <h3 class="text-2xl font-bold text-white mb-6">Technical Skills</h3>
-
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-white font-medium">HTML/CSS</span>
-                                <span class="text-[#FF4500]">95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Technical Skills -->
+            <div class="animate__animated animate__fadeInLeft">
+                <h3 class="text-2xl font-bold text-white mb-6">Technical Skills</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">HTML/CSS</span>
+                            <span class="text-[#FF4500]">95%</span>
                         </div>
-
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-white font-medium">JavaScript</span>
-                                <span class="text-[#FF4500]">65%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percentage="95%"></div>
                         </div>
+                    </div>
 
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-white font-medium">PHP/Laravel</span>
-                                <span class="text-[#FF4500]">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">JavaScript</span>
+                            <span class="text-[#FF4500]">85%</span>
                         </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percentage="85%"></div>
+                        </div>
+                    </div>
 
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-white font-medium">SQL/MySQL</span>
-                                <span class="text-[#FF4500]">60%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">PHP/Laravel</span>
+                            <span class="text-[#FF4500]">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percentage="90%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">SQL/MySQL</span>
+                            <span class="text-[#FF4500]">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percentage="80%"></div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="animate__animated animate__fadeInRight">
-                    <h3 class="text-2xl font-bold text-white mb-6">Professional Skills</h3>
-
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-white font-medium">Communication</span>
-                                <span class="text-[#FF4500]">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
+            <!-- Professional Skills -->
+            <div class="animate__animated animate__fadeInRight">
+                <h3 class="text-2xl font-bold text-white mb-6">Professional Skills</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Communication</span>
+                            <span class="text-[#FF4500]">90%</span>
                         </div>
-
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-white font-medium">Team Work</span>
-                                <span class="text-[#FF4500]">95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percentage="90%"></div>
                         </div>
+                    </div>
 
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-white font-medium">Project Management</span>
-                                <span class="text-[#FF4500]">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Team Work</span>
+                            <span class="text-[#FF4500]">95%</span>
                         </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percentage="95%"></div>
+                        </div>
+                    </div>
 
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-white font-medium">Creativity</span>
-                                <span class="text-[#FF4500]">88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Project Management</span>
+                            <span class="text-[#FF4500]">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percentage="85%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Creativity</span>
+                            <span class="text-[#FF4500]">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percentage="88%"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
     <!-- Projects Section -->
