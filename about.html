@@ -70,6 +70,15 @@
         .delay-400 {
             animation-delay: 0.4s;
         }
+
+        .progress-bar {
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+
+        .progress-bar.active {
+            width: var(--progress-width);
+        }
     </style>
 </head>
 
@@ -115,7 +124,11 @@
                     <h3 class="text-2xl font-bold mb-4 fade-in-up delay-100">I'm <span class="text-[#FF4500]">Pradip
                             Khanal</span>, a Web Developer</h3>
                     <p class="mb-6 text-lg leading-relaxed fade-in-up delay-200 text-justify">
-                        I’m a dedicated web developer from Nepal with over 2 years of hands-on experience crafting modern, responsive websites and dynamic web applications. While my expertise shines in front-end development, I also bring solid back-end skills to deliver seamless, full-stack solutions. Passionate about clean code and user-centric design, I strive to create digital experiences that are both visually stunning and highly functional
+                        I’m a dedicated web developer from Nepal with over 2 years of hands-on experience crafting
+                        modern, responsive websites and dynamic web applications. While my expertise shines in front-end
+                        development, I also bring solid back-end skills to deliver seamless, full-stack solutions.
+                        Passionate about clean code and user-centric design, I strive to create digital experiences that
+                        are both visually stunning and highly functional
 
                         I specialize in modern front-end development using HTML, Tailwind CSS, and Laravel,
                         combined with robust back-end solutions.
@@ -157,7 +170,7 @@
                             <span>95%</span>
                         </div>
                         <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="bg-[#FF4500] h-2.5 rounded-full progress-animate" style="--progress-width: 95%">
+                            <div class="bg-[#FF4500] h-2.5 rounded-full progress-bar" style="--progress-width: 95%">
                             </div>
                         </div>
                     </div>
@@ -169,7 +182,7 @@
                             <span>85%</span>
                         </div>
                         <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="bg-[#FF4500] h-2.5 rounded-full progress-animate" style="--progress-width: 85%">
+                            <div class="bg-[#FF4500] h-2.5 rounded-full progress-bar" style="--progress-width: 85%">
                             </div>
                         </div>
                     </div>
@@ -181,7 +194,7 @@
                             <span>80%</span>
                         </div>
                         <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="bg-[#FF4500] h-2.5 rounded-full progress-animate" style="--progress-width: 80%">
+                            <div class="bg-[#FF4500] h-2.5 rounded-full progress-bar" style="--progress-width: 80%">
                             </div>
                         </div>
                     </div>
@@ -193,12 +206,13 @@
                             <span>75%</span>
                         </div>
                         <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="bg-[#FF4500] h-2.5 rounded-full progress-animate" style="--progress-width: 75%">
+                            <div class="bg-[#FF4500] h-2.5 rounded-full progress-bar" style="--progress-width: 75%">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -248,7 +262,7 @@
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn"
-         class="hidden fixed bottom-5 right-5 text-2xl bg-[#FF4500] text-white rounded-full w-12 h-12 cursor-pointer opacity-70 hover:opacity-100 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl">↑</button>
+        class="hidden fixed bottom-5 right-5 text-2xl bg-[#FF4500] text-white rounded-full w-12 h-12 cursor-pointer opacity-70 hover:opacity-100 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl">↑</button>
 
     <script>
         // Scroll to top button
@@ -286,23 +300,39 @@
         });
 
         // Animate progress bars when scrolled into view
-        const progressBars = document.querySelectorAll('.progress-animate');
+        // const progressBars = document.querySelectorAll('.progress-animate');
 
-        const progressObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const width = entry.target.style.getPropertyValue('--progress-width');
-                    entry.target.style.width = '0';
-                    setTimeout(() => {
-                        entry.target.style.width = width;
-                    }, 100);
-                }
-            });
-        }, { threshold: 0.5 });
+        // const progressObserver = new IntersectionObserver((entries) => {
+        //     entries.forEach(entry => {
+        //         if (entry.isIntersecting) {
+        //             const width = entry.target.style.getPropertyValue('--progress-width');
+        //             entry.target.style.width = '0';
+        //             setTimeout(() => {
+        //                 entry.target.style.width = width;
+        //             }, 100);
+        //         }
+        //     });
+        // }, { threshold: 0.5 });
 
-        progressBars.forEach(bar => {
-            progressObserver.observe(bar);
+        // progressBars.forEach(bar => {
+        //     progressObserver.observe(bar);
+        // });
+        document.addEventListener("DOMContentLoaded", function () {
+            const bars = document.querySelectorAll('.progress-bar');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            bars.forEach(bar => observer.observe(bar));
         });
+
+
     </script>
 </body>
 
