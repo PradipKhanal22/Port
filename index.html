@@ -459,6 +459,25 @@
         skillBars.forEach(bar => {
             skillObserver.observe(bar);
         });
+
+          document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const progressBars = entry.target.querySelectorAll('.skill-progress');
+                        progressBars.forEach(bar => {
+                            const percentage = bar.getAttribute('data-percentage');
+                            bar.style.width = percentage;
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('#skills .animate__animated').forEach(section => {
+                observer.observe(section);
+            });
+        });
     </script>
 </body>
 
