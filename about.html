@@ -254,6 +254,11 @@
     aria-label="Scroll to top">↑</button>
 
   <script>
+// Mobile Navbar Toggle
+        document.getElementById("navToggle").onclick = function () {
+            document.getElementById("navMenu").classList.toggle("hidden");
+        };
+
     // Scroll to top button logic
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     window.addEventListener('scroll', () => {
