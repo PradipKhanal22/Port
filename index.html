@@ -338,6 +338,8 @@
       </div>
     </div>
   </section>
+<!-- Scroll to Top -->
+    <button id="scrollToTopBtn" class="hidden fixed bottom-5 right-5 text-2xl bg-[#FF4500] text-white rounded-full w-12 h-12 cursor-pointer flex items-center justify-center shadow-lg hover:scale-110 transition">↑</button>
 
   <!-- Footer -->
   <footer class="bg-[rgb(40,40,48)] text-white py-6 px-4 md:px-12">
@@ -357,6 +359,13 @@
       document.getElementById("navMenu").classList.toggle("hidden");
     };
 
+     // Scroll to top button
+        const topBtn = document.getElementById("scrollToTopBtn");
+        window.onscroll = () => {
+            topBtn.classList.toggle("hidden", window.scrollY < 20);
+        };
+        topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+        
     // Animate skill progress bars on page load
     window.addEventListener('load', () => {
       document.querySelectorAll('.skill-progress').forEach((bar) => {
