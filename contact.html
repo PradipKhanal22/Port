@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Pradip Khanal - Professional Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
         :root {
             --primary-color: #ea580c;
@@ -24,185 +22,13 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 50%, #0f172a 100%);
+            font-family: 'Lato', serif;
             scroll-behavior: smooth;
-            line-height: 1.6;
+            background: var(--dark-bg);
         }
 
         .font-display {
             font-family: 'Playfair Display', serif;
-        }
-
-        /* Professional Card Design */
-        .professional-card {
-            background: linear-gradient(145deg, var(--card-bg) 0%, #334155 100%);
-            border: 1px solid var(--border-color);
-            backdrop-filter: blur(20px);
-            box-shadow:
-                0 20px 25px -5px rgba(0, 0, 0, 0.3),
-                0 10px 10px -5px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .professional-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
-            transition: left 0.8s ease;
-        }
-
-        .professional-card:hover::before {
-            left: 100%;
-        }
-
-        .professional-card:hover {
-            transform: translateY(-8px);
-            box-shadow:
-                0 25px 50px -12px rgba(0, 0, 0, 0.4),
-                0 20px 25px -5px rgba(0, 0, 0, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.15);
-            border-color: var(--secondary-color);
-        }
-
-        /* Professional Form Design */
-        .professional-form {
-            background: linear-gradient(145deg, var(--card-bg) 0%, #334155 100%);
-            border: 1px solid var(--border-color);
-            backdrop-filter: blur(20px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .professional-form::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
-            background-size: 200% 100%;
-            animation: shimmer 3s ease-in-out infinite;
-        }
-
-        @keyframes shimmer {
-            0% {
-                background-position: 200% 0;
-            }
-
-            100% {
-                background-position: -200% 0;
-            }
-        }
-
-        /* Professional Input Design */
-        .professional-input {
-            background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
-            border: 2px solid var(--border-color);
-            color: var(--text-primary);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-
-        .professional-input:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-            background: #1e293b;
-            box-shadow:
-                0 0 0 4px rgba(249, 115, 22, 0.1),
-                0 10px 25px rgba(249, 115, 22, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .professional-input::placeholder {
-            color: #64748b;
-            font-weight: 400;
-        }
-
-        /* Professional Button Design */
-        .professional-btn {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
-            border: none;
-            color: white;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .professional-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .professional-btn:hover::before {
-            left: 100%;
-        }
-
-        .professional-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(234, 88, 12, 0.4);
-        }
-
-        /* Professional Contact Info Cards */
-        .contact-info-card {
-            background: linear-gradient(145deg, var(--card-bg) 0%, #334155 100%);
-            border: 1px solid var(--border-color);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-info-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(249, 115, 22, 0.05), transparent);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .contact-info-card:hover::after {
-            opacity: 1;
-        }
-
-        .contact-info-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-            border-color: var(--secondary-color);
-        }
-
-        /* Professional Icon Design */
-        .professional-icon {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            transition: all 0.4s ease;
-            position: relative;
-        }
-
-        .professional-icon:hover {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 15px 30px rgba(234, 88, 12, 0.4);
         }
 
         /* Professional Navigation */
@@ -241,48 +67,14 @@
             color: var(--text-primary);
         }
 
-        /* Professional Social Links */
-        .social-link {
-            background: linear-gradient(145deg, var(--card-bg), #334155);
-            border: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .social-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-
-        .social-link:hover::before {
-            left: 0;
-        }
-
-        .social-link:hover {
+        .professional-icon {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            transform: translateY(-3px);
-            border-color: var(--secondary-color);
+            transition: all 0.4s ease;
         }
 
-        /* Professional Animations */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .fade-in-up.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .professional-icon:hover {
+            transform: scale(1.1) rotate(5deg);
         }
 
         .professional-gradient-text {
@@ -295,62 +87,233 @@
         }
 
         @keyframes gradient-shift {
-
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
-        /* Professional Loading Animation */
+        .professional-card {
+            background: linear-gradient(145deg, var(--card-bg) 0%, #334155 100%);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+        }
+
+        .professional-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border-color: var(--secondary-color);
+        }
+
+        .professional-form {
+            background: linear-gradient(145deg, var(--card-bg) 0%, #334155 100%);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .professional-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .professional-input {
+            background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .professional-input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            background: #1e293b;
+            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1), 0 10px 25px rgba(249, 115, 22, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .professional-input::placeholder {
+            color: #64748b;
+            font-weight: 400;
+        }
+
+        .professional-btn {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+            border: none;
+            color: white;
+            font-weight: 600;
+            transition: all 0.4s ease;
+        }
+
+        .professional-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(234, 88, 12, 0.4);
+        }
+
+        .btn-enhanced {
+            position: relative;
+            overflow: hidden;
+            transform: translateY(0);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-enhanced:hover::before {
+            left: 100%;
+        }
+
+        .btn-enhanced:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(234, 88, 12, 0.4);
+        }
+
+        .contact-info-card {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-info-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(249, 115, 22, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .contact-info-card:hover::after {
+            opacity: 1;
+        }
+
+        .social-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(234, 88, 12, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .social-link:hover {
+            background: linear-gradient(135deg, #ea580c, #f97316);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(234, 88, 12, 0.3);
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #ea580c, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .loading-dots::after {
             content: '';
             animation: loading-dots 1.5s infinite;
         }
 
         @keyframes loading-dots {
-
-            0%,
-            20% {
-                content: '';
-            }
-
-            40% {
-                content: '.';
-            }
-
-            60% {
-                content: '..';
-            }
-
-            80%,
-            100% {
-                content: '...';
-            }
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
         }
 
-        /* Professional Scroll Effects */
-        .parallax-bg {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
 
-        /* Professional Typography */
-        .text-gradient {
-            background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+        ::-webkit-scrollbar-track {
+            background: rgb(34,34,41);
         }
 
-        /* Responsive Design */
+        ::-webkit-scrollbar-thumb {
+            background: #ea580c;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d44f0b;
+        }
+
+        /* Floating Animation */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Mobile Menu */
+        #mobileMenu {
+            transition: all 0.3s ease;
+        }
+
+        #mobileMenu.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+        }
+
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
             .professional-card:hover {
                 transform: translateY(-4px);
             }
@@ -359,16 +322,9 @@
                 transform: translateY(-4px) scale(1.01);
             }
         }
-
-        /* Professional Footer */
-        .professional-footer {
-            background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
-            border-top: 1px solid var(--border-color);
-        }
     </style>
 </head>
-
-<body class="text-white min-h-screen">
+<body class="bg-[rgb(34,34,41)]">
     <!-- Professional Navigation -->
     <nav class="professional-nav fixed top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -402,8 +358,7 @@
                     <a href="blog.html" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
                         <i class="fas fa-blog mr-2"></i>Blog
                     </a>
-                    <a href="contact.html"
-                        class="nav-link active px-4 py-2 rounded-lg transition-all duration-300 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
+                    <a href="contact.html" class="nav-link active px-4 py-2 rounded-lg transition-all duration-300 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
                         <i class="fas fa-envelope mr-2"></i>Contact
                     </a>
                 </div>
@@ -415,8 +370,7 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu"
-                class="lg:hidden hidden absolute top-full left-0 right-0 professional-card m-4 rounded-2xl">
+            <div id="mobileMenu" class="lg:hidden hidden absolute top-full left-0 right-0 professional-card m-4 rounded-2xl">
                 <div class="p-6 space-y-4">
                     <a href="index.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
                         <i class="fas fa-home"></i><span>Home</span>
@@ -433,8 +387,7 @@
                     <a href="blog.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
                         <i class="fas fa-blog"></i><span>Blog</span>
                     </a>
-                    <a href="contact.html"
-                        class="nav-link active flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 text-white">
+                    <a href="contact.html" class="nav-link active flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 text-white">
                         <i class="fas fa-envelope"></i><span>Contact</span>
                     </a>
                 </div>
@@ -443,39 +396,24 @@
     </nav>
 
     <!-- Professional Hero Section -->
-    <section class="pt-32 pb-20 px-6 lg:px-8 relative overflow-hidden">
-        <!-- Professional Background Elements -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-20 left-10 w-32 h-32 border-2 border-orange-500/20 rounded-full animate-pulse">
-            </div>
-            <div
-                class="absolute top-40 right-20 w-24 h-24 border-2 border-orange-400/20 rounded-lg rotate-45 animate-pulse">
-            </div>
-            <div
-                class="absolute bottom-20 left-20 w-20 h-20 bg-gradient-to-br from-orange-500/10 to-orange-600/10 rounded-full animate-pulse">
-            </div>
-            <div
-                class="absolute bottom-40 right-10 w-28 h-28 border-2 border-orange-300/20 rounded-xl rotate-12 animate-pulse">
-            </div>
+    <section class="pt-32 pb-20 px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(25,25,31)]">
+        <!-- Background Decorations -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-32 h-32 border-2 border-[#ea580c] rounded-full animate-pulse"></div>
+            <div class="absolute bottom-32 right-32 w-24 h-24 border border-[#ea580c] rounded-full floating"></div>
+            <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-[#ea580c] rounded-full opacity-30 floating" style="animation-delay: -1s;"></div>
+            <div class="absolute top-1/3 right-1/3 w-20 h-20 border border-[#ea580c] rounded-full opacity-20 floating" style="animation-delay: -2s;"></div>
         </div>
 
         <div class="max-w-7xl mx-auto relative z-10">
             <!-- Professional Header -->
             <div class="text-center mb-20 fade-in-up">
-                <div class="mb-6">
-                    <span
-                        class="inline-block px-6 py-3 bg-gradient-to-r from-orange-500/20 to-orange-600/20 rounded-full text-orange-400 font-medium border border-orange-500/20">
-                        <i class="fas fa-handshake mr-2"></i>Let's Connect
-                    </span>
-                </div>
-                <h1 class="text-5xl lg:text-7xl font-bold font-display mb-8">
-                    <span class="professional-gradient-text">Get In Touch</span>
+                <h1 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
+                    Get In <span class="gradient-text">Touch</span>
                 </h1>
-                <div
-                    class="w-32 h-1 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-400 mx-auto mb-8 rounded-full">
-                </div>
-                <p class="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
-                    Ready to transform your ideas into exceptional digital solutions?
+                <div class="w-24 h-1 bg-gradient-to-r from-[#ea580c] to-[#f97316] mx-auto mb-6"></div>
+                <p class="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
+                    Ready to transform your ideas into exceptional digital solutions? Let's connect and discuss your project.
                 </p>
             </div>
 
@@ -483,15 +421,14 @@
             <div class="grid grid-cols-1 xl:grid-cols-3 gap-12 lg:gap-16">
                 <!-- Professional Contact Form -->
                 <div class="xl:col-span-2 fade-in-up" style="animation-delay: 0.2s;">
-                    <div class="professional-form p-8 lg:p-12 rounded-3xl">
+                    <div class="professional-form p-8 lg:p-12 rounded-3xl border border-[#ea580c]/20">
                         <div class="mb-10">
                             <h2 class="text-3xl lg:text-4xl font-bold font-display mb-4 text-white">
                                 Send Me a Message
                             </h2>
-                            <div class="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full"></div>
-                            <p class="text-gray-300 mt-4 text-lg">
-                                I'd love to hear about your project. Fill out the form below and I'll get back to you
-                                within 24 hours.
+                            <div class="w-20 h-1 bg-gradient-to-r from-[#ea580c] to-[#f97316] rounded-full"></div>
+                            <p class="text-gray-400 mt-4 text-lg">
+                                I'd love to hear about your project. Fill out the form below, and I'll get back to you within 24 hours.
                             </p>
                         </div>
 
@@ -499,20 +436,17 @@
                             <!-- Name and Email Row -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="fade-in-up" style="animation-delay: 0.4s;">
-                                    <label
-                                        class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
-                                        <i class="fas fa-user mr-2 text-orange-400"></i>Full Name
+                                    <label class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
+                                        <i class="fas fa-user mr-2 text-[#ea580c]"></i>Full Name
                                     </label>
                                     <input type="text" id="name" name="name" placeholder="Enter your full name" required
                                         class="professional-input w-full px-6 py-4 rounded-2xl text-white placeholder-gray-400 text-lg">
                                 </div>
                                 <div class="fade-in-up" style="animation-delay: 0.5s;">
-                                    <label
-                                        class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
-                                        <i class="fas fa-envelope mr-2 text-orange-500"></i>Email Address
+                                    <label class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
+                                        <i class="fas fa-envelope mr-2 text-[#ea580c]"></i>Email Address
                                     </label>
-                                    <input type="email" id="email" name="email" placeholder="Enter your email address"
-                                        required
+                                    <input type="email" id="email" name="email" placeholder="Enter your email address" required
                                         class="professional-input w-full px-6 py-4 rounded-2xl text-white placeholder-gray-400 text-lg">
                                 </div>
                             </div>
@@ -520,17 +454,16 @@
                             <!-- Subject -->
                             <div class="fade-in-up" style="animation-delay: 0.6s;">
                                 <label class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
-                                    <i class="fas fa-tag mr-2 text-orange-600"></i>Subject
+                                    <i class="fas fa-tag mr-2 text-[#ea580c]"></i>Subject
                                 </label>
-                                <input type="text" id="subject" name="subject"
-                                    placeholder="What would you like to discuss?" required
+                                <input type="text" id="subject" name="subject" placeholder="What would you like to discuss?" required
                                     class="professional-input w-full px-6 py-4 rounded-2xl text-white placeholder-gray-400 text-lg">
                             </div>
 
                             <!-- Message -->
                             <div class="fade-in-up" style="animation-delay: 0.7s;">
                                 <label class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
-                                    <i class="fas fa-comment-alt mr-2 text-orange-300"></i>Message
+                                    <i class="fas fa-comment-alt mr-2 text-[#ea580c]"></i>Message
                                 </label>
                                 <textarea id="message" name="message"
                                     placeholder="Tell me about your project, goals, and how I can help you achieve them..."
@@ -541,13 +474,12 @@
                             <!-- Submit Button -->
                             <div class="fade-in-up" style="animation-delay: 0.8s;">
                                 <button type="submit" id="submitBtn"
-                                    class="professional-btn w-full px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105">
+                                    class="professional-btn btn-enhanced w-full px-10 py-5 rounded-2xl font-bold text-lg">
                                     <span id="buttonText" class="flex items-center justify-center">
                                         <i class="fas fa-paper-plane mr-3"></i>Send Message
                                     </span>
                                     <span id="loadingText" class="hidden flex items-center justify-center">
-                                        <i class="fas fa-spinner fa-spin mr-3"></i>Sending<span
-                                            class="loading-dots"></span>
+                                        <i class="fas fa-spinner fa-spin mr-3"></i>Sending<span class="loading-dots"></span>
                                     </span>
                                 </button>
                             </div>
@@ -563,10 +495,8 @@
                             <h2 class="text-3xl lg:text-4xl font-bold font-display mb-4 text-white">
                                 Contact Information
                             </h2>
-                            <div
-                                class="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mx-auto lg:mx-0">
-                            </div>
-                            <p class="text-gray-300 mt-4 text-lg">
+                            <div class="w-20 h-1 bg-gradient-to-r from-[#ea580c] to-[#f97316] rounded-full mx-auto lg:mx-0"></div>
+                            <p class="text-gray-400 mt-4 text-lg">
                                 Multiple ways to reach me. Choose what works best for you.
                             </p>
                         </div>
@@ -574,62 +504,50 @@
                         <!-- Professional Contact Cards -->
                         <div class="space-y-6">
                             <!-- Phone Card -->
-                            <div class="contact-info-card p-6 lg:p-8 rounded-3xl fade-in-up"
-                                style="animation-delay: 0.4s;">
+                            <div class="contact-info-card professional-card p-6 lg:p-8 rounded-3xl fade-in-up" style="animation-delay: 0.4s;">
                                 <div class="flex items-start space-x-6">
                                     <div class="professional-icon p-4 rounded-2xl flex-shrink-0">
                                         <i class="fas fa-phone text-2xl"></i>
                                     </div>
                                     <div class="flex-grow">
-                                        <h3 class="font-bold text-xl text-white mb-2 font-display">Phone Numbers</h3>
+                                        <h3 class="font-bold text-xl text-white mb-2 font-display">Phone Number</h3>
                                         <div class="space-y-2">
                                             <div class="flex items-center space-x-3">
-                                                <span class="text-orange-400">📱</span>
-                                                <span class="text-gray-300 text-lg">+977 9804453481</span>
-                                            </div>
-                                            <div class="flex items-center space-x-3">
-                                                <span class="text-orange-500">📞</span>
-                                                <span class="text-gray-300 text-lg">+977 9765660867</span>
+                                                <span class="text-[#ea580c]">📱</span>
+                                                <span class="text-gray-400 text-lg">+977 9804453581</span>
                                             </div>
                                         </div>
                                         <div class="mt-4 flex items-center space-x-2">
                                             <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                                            <span class="text-sm text-green-400 font-medium">Available 9 AM - 9 PM
-                                                (NPT)</span>
+                                            <span class="text-sm text-green-400 font-medium">Available 9 AM - 9 PM (NPT)</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Email Card -->
-                            <div class="contact-info-card p-6 lg:p-8 rounded-3xl fade-in-up"
-                                style="animation-delay: 0.5s;">
+                            <div class="contact-info-card professional-card p-6 lg:p-8 rounded-3xl fade-in-up" style="animation-delay: 0.5s;">
                                 <div class="flex items-start space-x-6">
                                     <div class="professional-icon p-4 rounded-2xl flex-shrink-0">
                                         <i class="fas fa-envelope text-2xl"></i>
                                     </div>
                                     <div class="flex-grow">
-                                        <h3 class="font-bold text-xl text-white mb-2 font-display">Email Addresses</h3>
+                                        <h3 class="font-bold text-xl text-white mb-2 font-display">Email Address</h3>
                                         <div class="space-y-2">
                                             <div class="flex items-center space-x-3">
-                                                <span class="text-gray-300 text-lg">khanalpradip74@gmail.com</span>
-                                            </div>
-                                            <div class="flex items-center space-x-3">
-                                                <span class="text-gray-300 text-lg">khanalpradip66@gmail.com</span>
+                                                <span class="text-gray-400 text-lg">khanalpradip74@gmail.com</span>
                                             </div>
                                         </div>
                                         <div class="mt-4 flex items-center space-x-2">
                                             <span class="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
-                                            <span class="text-sm text-orange-400 font-medium">Response within 24
-                                                hours</span>
+                                            <span class="text-sm text-orange-400 font-medium">Response within 24 hours</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Location Card -->
-                            <div class="contact-info-card p-6 lg:p-8 rounded-3xl fade-in-up"
-                                style="animation-delay: 0.6s;">
+                            <div class="contact-info-card professional-card p-6 lg:p-8 rounded-3xl fade-in-up" style="animation-delay: 0.6s;">
                                 <div class="flex items-start space-x-6">
                                     <div class="professional-icon p-4 rounded-2xl flex-shrink-0">
                                         <i class="fas fa-map-marker-alt text-2xl"></i>
@@ -638,16 +556,12 @@
                                         <h3 class="font-bold text-xl text-white mb-2 font-display">Location</h3>
                                         <div class="space-y-2">
                                             <div class="flex items-center space-x-3">
-                                                <span class="text-gray-300 text-lg">Kawasoti-9, Nawalpur</span>
-                                            </div>
-                                            <div class="flex items-center space-x-3">
-                                                <span class="text-gray-300 text-lg">Nepal</span>
+                                                <span class="text-gray-400 text-lg">Kawasoti-9, Nawalpur, Nepal</span>
                                             </div>
                                         </div>
                                         <div class="mt-4 flex items-center space-x-2">
                                             <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                                            <span class="text-sm text-green-400 font-medium">Remote work available
-                                                worldwide</span>
+                                            <span class="text-sm text-green-400 font-medium">Remote work available worldwide</span>
                                         </div>
                                     </div>
                                 </div>
@@ -659,25 +573,19 @@
                             <h3 class="font-bold text-2xl text-white mb-6 font-display text-center lg:text-left">
                                 Connect With Me
                             </h3>
-                            <div class="fade-in-up">
-                                <div class="flex space-x-4 justify-center lg:justify-start">
-                                    <a href="https://facebook.com/pradip.khanal.7528" target="_blank"
-                                        class="social-link w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="https://instagram.com/pradipkhanal_25" target="_blank"
-                                        class="social-link w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                    <a href="https://linkedin.com/in/pradip-khanal-92a97333a" target="_blank"
-                                        class="social-link w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="https://github.com/PradipKhanal22" target="_blank"
-                                        class="social-link w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
+                            <div class="flex space-x-4 justify-center lg:justify-start">
+                                <a href="https://facebook.com/pradip.khanal.7528" target="_blank" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f text-lg"></i>
+                                </a>
+                                <a href="https://instagram.com/pradipkhanal_25" target="_blank" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram text-lg"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/pradip-khanal-92a97333a" target="_blank" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in text-lg"></i>
+                                </a>
+                                <a href="https://github.com/PradipKhanal22" target="_blank" class="social-link" aria-label="GitHub">
+                                    <i class="fab fa-github text-lg"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -687,116 +595,181 @@
     </section>
 
     <!-- Professional Footer -->
-    <footer class="professional-footer py-10 px-6 lg:px-8">
+    <footer class="professional-footer py-16 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="border-t border-gray-700 pt-8 flex flex-col lg:flex-row justify-between items-center gap-8">
-                <!-- Social Links -->
-                <div class="fade-in-up flex flex-col items-center lg:items-start">
-                    <h5 class="text-sm font-semibold text-gray-400 mb-3">Follow My Journey</h5>
-                    <div class="flex space-x-3">
-                        <a href="https://facebook.com/pradip.khanal.7528" target="_blank"
-                            class="social-link w-10 h-10 rounded-xl flex items-center justify-center">
-                            <i class="fab fa-facebook-f"></i>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand Section -->
+                <div class="footer-section fade-in-up">
+                    <h3 class="text-2xl font-bold font-display professional-gradient-text mb-4">
+                        <i class="fas fa-code mr-2"></i>Pradip Khanal
+                    </h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Passionate developer creating innovative solutions with modern technologies.
+                        Let's build something amazing together.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/PradipKhanal22" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github text-lg"></i>
                         </a>
-                        <a href="https://instagram.com/pradipkhanal_25" target="_blank"
-                            class="social-link w-10 h-10 rounded-xl flex items-center justify-center">
-                            <i class="fab fa-instagram"></i>
+                        <a href="https://linkedin.com/in/pradip-khanal-92a97333a" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-lg"></i>
                         </a>
-                        <a href="https://linkedin.com/in/pradip-khanal-92a97333a" target="_blank"
-                            class="social-link w-10 h-10 rounded-xl flex items-center justify-center">
-                            <i class="fab fa-linkedin-in"></i>
+                        <a href="https://facebook.com/pradip.khanal.7528" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-lg"></i>
                         </a>
-                        <a href="https://github.com/PradipKhanal22" target="_blank"
-                            class="social-link w-10 h-10 rounded-xl flex items-center justify-center">
-                            <i class="fab fa-github"></i>
+                        <a href="https://instagram.com/pradipkhanal_25" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram text-lg"></i>
                         </a>
                     </div>
                 </div>
-                <!-- Copyright -->
-                <div class="fade-in-up text-center lg:text-right" style="animation-delay: 0.2s;">
-                    <p class="text-gray-400 text-sm">
-                        &copy; 2024 Pradip Khanal. All rights reserved.
-                    </p>
+
+                <!-- Quick Links -->
+                <div class="footer-section fade-in-up" style="animation-delay: 0.2s;">
+                    <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Quick Links</h4>
+                    <a href="index.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="about.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+                        <i class="fas fa-user mr-2"></i>About
+                    </a>
+                    <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+                        <i class="fas fa-cogs mr-2"></i>Services
+                    </a>
+                    <a href="resume.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+                        <i class="fas fa-file-alt mr-2"></i>Resume
+                    </a>
                 </div>
+
+                <!-- Services -->
+                <div class="footer-section fade-in-up" style="animation-delay: 0.4s;">
+                    <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Services</h4>
+                    <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+                        <i class="fas fa-laptop-code mr-2"></i>Web Development
+                    </a>
+                    <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+                        <i class="fas fa-mobile-alt mr-2"></i>Mobile Apps
+                    </a>
+                    <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+                        <i class="fas fa-paint-brush mr-2"></i>UI/UX Design
+                    </a>
+                    <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+                        <i class="fas fa-search mr-2"></i>SEO Optimization
+                    </a>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section fade-in-up" style="animation-delay: 0.6s;">
+                    <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Get In Touch</h4>
+                    <div class="text-gray-400 mb-2">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span>khanalpradip74@gmail.com</span>
+                    </div>
+                    <div class="text-gray-400 mb-2">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span>+977 9804453581</span>
+                    </div>
+                    <div class="text-gray-400 mb-2">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span>Kawasoti-9, Nawalpur, Nepal</span>
+                    </div>
+                    <a href="blog.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+                        <i class="fas fa-blog mr-2"></i>Blog
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center fade-in-up" style="animation-delay: 0.8s;">
+                <p class="text-gray-400">
+                    © 2024 Pradip Khanal. All rights reserved. Made with
+                    <i class="fas fa-heart text-red-500 mx-1"></i> and
+                    <i class="fas fa-coffee text-yellow-600 mx-1"></i>
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Professional Scroll to Top Button -->
+    <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn"
         class="hidden fixed bottom-8 right-8 w-14 h-14 professional-btn rounded-full cursor-pointer transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 z-50">
         <i class="fas fa-arrow-up text-lg"></i>
     </button>
 
-    <!-- Professional JavaScript -->
     <script>
-        // Professional Navigation Functionality
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        // Mobile Navbar Toggle
+        const menuToggle = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = menuToggle.querySelector('i');
+        const menuLinks = mobileMenu.querySelectorAll('a');
 
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                mobileMenuBtn.classList.toggle('active');
-
-                // Update icon
-                const icon = mobileMenuBtn.querySelector('i');
-                if (mobileMenu.classList.contains('hidden')) {
-                    icon.className = 'fas fa-bars';
-                } else {
-                    icon.className = 'fas fa-times';
-                }
-            });
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
-                }
-            });
-        }
-
-        // Professional Scroll to Top Button
-        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollToTopBtn.classList.remove('hidden');
-                scrollToTopBtn.classList.add('flex');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fas fa-bars';
             } else {
-                scrollToTopBtn.classList.add('hidden');
-                scrollToTopBtn.classList.remove('flex');
+                menuIcon.className = 'fas fa-times';
             }
         });
 
-        scrollToTopBtn.addEventListener('click', () => {
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fas fa-bars';
+            });
+        });
+
+        // Scroll to top functionality
+        const scrollTopBtn = document.getElementById('scrollToTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.remove('hidden');
+            } else {
+                scrollTopBtn.classList.add('hidden');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
 
-        // Professional Intersection Observer for Animations
-        const observerOptions = {
-            threshold: 0.1,
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in-up animations
+        const faders = document.querySelectorAll('.fade-in-up');
+        const appearOptions = {
+            threshold: 0.2,
             rootMargin: "0px 0px -50px 0px"
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, appearOptions);
 
-        // Observe all fade-in-up elements
-        document.querySelectorAll('.fade-in-up').forEach(el => {
-            observer.observe(el);
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
         });
 
-        // Professional Contact Form Handling
+        // Contact Form Handling
         const contactForm = document.getElementById('contactForm');
         const submitBtn = document.getElementById('submitBtn');
         const buttonText = document.getElementById('buttonText');
@@ -806,7 +779,7 @@
             contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
-                // Validate form first
+                // Validate form
                 if (!validateForm()) {
                     showNotification('Please fill in all required fields correctly.', 'error');
                     return;
@@ -822,7 +795,6 @@
                 const formData = new FormData(contactForm);
                 const formObject = Object.fromEntries(formData.entries());
 
-                // Simulate form submission (replace with actual API endpoint)
                 try {
                     // Simulate API call
                     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -849,7 +821,7 @@
             });
         }
 
-        // Professional Form Validation
+        // Form Validation
         function validateForm() {
             const requiredFields = document.querySelectorAll('#contactForm [required]');
             let isValid = true;
@@ -878,7 +850,7 @@
 
         function addErrorState(field, message) {
             field.classList.add('border-red-500');
-            field.classList.remove('border-transparent');
+            field.classList.remove('border-[#334155]');
 
             // Remove existing error message
             const existingError = field.parentElement.querySelector('.error-message');
@@ -895,7 +867,7 @@
 
         function removeErrorState(field) {
             field.classList.remove('border-red-500');
-            field.classList.add('border-transparent');
+            field.classList.add('border-[#334155]');
 
             const errorMessage = field.parentElement.querySelector('.error-message');
             if (errorMessage) {
@@ -903,25 +875,23 @@
             }
         }
 
-        // Professional Notification System
+        // Notification System
         function showNotification(message, type = 'info') {
             const notification = document.createElement('div');
-            notification.className = `fixed top-6 right-6 z-50 p-6 rounded-2xl shadow-2xl transition-all duration-500 transform translate-x-full max-w-md ${type === 'success'
-                    ? 'bg-gradient-to-r from-green-600 to-green-700 text-white'
-                    : type === 'error'
-                        ? 'bg-gradient-to-r from-red-600 to-red-700 text-white'
-                        : 'bg-gradient-to-r from-blue-600 to-blue-700 text-white'
-                }`;
+            notification.className = `fixed top-6 right-6 z-50 p-6 rounded-2xl shadow-2xl transition-all duration-500 transform translate-x-full max-w-md ${
+                type === 'success' ? 'bg-gradient-to-r from-green-600 to-green-700 text-white' :
+                type === 'error' ? 'bg-gradient-to-r from-red-600 to-red-700 text-white' :
+                'bg-gradient-to-r from-blue-600 to-blue-700 text-white'
+            }`;
 
             notification.innerHTML = `
                 <div class="flex items-start space-x-4">
                     <div class="flex-shrink-0 mt-1">
-                        ${type === 'success'
-                    ? '<i class="fas fa-check-circle text-2xl"></i>'
-                    : type === 'error'
-                        ? '<i class="fas fa-exclamation-circle text-2xl"></i>'
-                        : '<i class="fas fa-info-circle text-2xl"></i>'
-                }
+                        ${
+                            type === 'success' ? '<i class="fas fa-check-circle text-2xl"></i>' :
+                            type === 'error' ? '<i class="fas fa-exclamation-circle text-2xl"></i>' :
+                            '<i class="fas fa-info-circle text-2xl"></i>'
+                        }
                     </div>
                     <div class="flex-1">
                         <p class="font-semibold text-lg mb-1">${type === 'success' ? 'Success!' : type === 'error' ? 'Error!' : 'Info'}</p>
@@ -952,7 +922,7 @@
             }, 6000);
         }
 
-        // Professional Input Focus Effects
+        // Input Focus Effects
         document.querySelectorAll('.professional-input').forEach(input => {
             input.addEventListener('focus', () => {
                 input.parentElement.classList.add('focused');
@@ -969,84 +939,23 @@
                 removeErrorState(input);
             });
 
-            // Check if input has value on page load
             if (input.value.trim()) {
                 input.parentElement.classList.add('focused');
             }
         });
 
-        // Professional Loading Dots Animation
-        let loadingDotsInterval;
-
-        function startLoadingDots() {
-            const dotsElement = document.querySelector('.loading-dots');
-            if (!dotsElement) return;
-
-            let dots = '';
-            loadingDotsInterval = setInterval(() => {
-                dots = dots.length >= 3 ? '' : dots + '.';
-                dotsElement.textContent = dots;
-            }, 500);
-        }
-
-        function stopLoadingDots() {
-            if (loadingDotsInterval) {
-                clearInterval(loadingDotsInterval);
-            }
-        }
-
-        // Professional Page Load Animations
-        window.addEventListener('load', () => {
-            // Trigger initial animations
-            setTimeout(() => {
-                document.querySelectorAll('.fade-in-up').forEach((el, index) => {
-                    setTimeout(() => {
-                        el.classList.add('visible');
-                    }, index * 100);
-                });
-            }, 300);
-        });
-
-        // Professional Keyboard Navigation
+        // Keyboard Navigation
         document.addEventListener('keydown', (e) => {
-            // ESC to close mobile menu
             if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
-                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                menuIcon.className = 'fas fa-bars';
             }
 
-            // Enter to submit form when focused on submit button
             if (e.key === 'Enter' && e.target === submitBtn) {
                 e.preventDefault();
                 contactForm.dispatchEvent(new Event('submit'));
             }
         });
-
-        // Professional Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Professional Performance Monitoring
-        if ('performance' in window) {
-            window.addEventListener('load', () => {
-                setTimeout(() => {
-                    const perfData = performance.timing;
-                    const loadTime = perfData.loadEventEnd - perfData.navigationStart;
-                    console.log(`Professional Contact Page loaded in ${loadTime}ms`);
-                }, 0);
-            });
-        }
     </script>
 </body>
-
 </html>
