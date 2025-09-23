@@ -1380,9 +1380,28 @@
 
   <script>
     // Mobile Navbar Toggle
-    document.getElementById("navToggle").onclick = function () {
-      document.getElementById("navMenu").classList.toggle("hidden");
-    };
+    const menuToggle = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = menuToggle.querySelector('i');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      // Toggle hamburger/X icon
+      if (mobileMenu.classList.contains('hidden')) {
+        menuIcon.className = 'fas fa-bars';
+      } else {
+        menuIcon.className = 'fas fa-times';
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.className = 'fas fa-bars';
+      });
+    });
     
     // Scroll to top button
     const topBtn = document.getElementById("scrollToTopBtn");
@@ -1516,26 +1535,26 @@
         
     // Skills Progress Animation with Intersection Observer
     document.addEventListener('DOMContentLoaded', function() {
-      const skillsSection = document.querySelector('.skill-item');
-      if (!skillsSection) return;
+      const skillsSections = document.querySelectorAll('#skills, .py-20.px-4.md\\:px-12.bg-gradient-to-br.from-\\[rgb\\(34\\,34\\,41\\)\\].to-\\[rgb\\(25\\,25\\,31\\)\\]');
+      skillsSections.forEach(skillsSection => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const skillItems = skillsSection.querySelectorAll('.skill-item');
+              skillItems.forEach((item, index) => {
+                setTimeout(() => {
+                  const progressBar = item.querySelector('.skill-progress');
+                  const percentage = progressBar.getAttribute('data-percentage');
+                  progressBar.style.width = percentage;
+                }, index * 200);
+              });
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.3 });
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const skillItems = document.querySelectorAll('.skill-item');
-            skillItems.forEach((item, index) => {
-              setTimeout(() => {
-                const progressBar = item.querySelector('.skill-progress');
-                const percentage = progressBar.getAttribute('data-percentage');
-                progressBar.style.width = percentage;
-              }, index * 200);
-            });
-            observer.disconnect();
-          }
-        });
-      }, { threshold: 0.3 });
-
-      observer.observe(skillsSection);
+        observer.observe(skillsSection);
+      });
     });
 
     // Optional: Animate project cards when they scroll into view
@@ -1554,40 +1573,14 @@
       observer.observe(card);
     });
 
-    // Mobile menu functionality
-    const menuToggle = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = menuToggle.querySelector('i');
-    const menuLinks = mobileMenu.querySelectorAll('a');
-
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      // Toggle hamburger/X icon
-      if (mobileMenu.classList.contains('hidden')) {
-        menuIcon.className = 'fas fa-bars';
-      } else {
-        menuIcon.className = 'fas fa-times';
-      }
-    });
-
-    // Close mobile menu when clicking on a link
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuIcon.className = 'fas fa-bars';
-      });
-    });
-
     // Scroll to top functionality
-    const scrollTopBtn = document.getElementById('scroll-top');
+    const scrollTopBtn = document.getElementById('scrollToTopBtn');
     
     window.addEventListener('scroll', () => {
       if (window.pageYOffset > 300) {
-        scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
-        scrollTopBtn.classList.add('opacity-100');
+        scrollTopBtn.classList.remove('hidden');
       } else {
-        scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
-        scrollTopBtn.classList.remove('opacity-100');
+        scrollTopBtn.classList.add('hidden');
       }
     });
 
