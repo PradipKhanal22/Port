@@ -393,13 +393,24 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Image Section -->
         <div class="fade-in-up relative">
-          <div class="relative z-10">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#FF4500]/20 to-transparent rounded-lg transform rotate-3"></div>
+          <div class="relative z-10 group">
+            <!-- Animated Gradient Border -->
+            <div class="absolute inset-0 rounded-2xl pointer-events-none">
+              <div class="w-full h-full rounded-2xl border-4 border-transparent group-hover:border-[#FF4500] transition-all duration-500"
+                style="box-shadow: 0 0 40px 10px #FF4500, 0 0 0 0 #FF6B35;">
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-br from-[#FF4500]/20 via-[#FF6B35]/10 to-transparent rounded-2xl blur-sm"></div>
+            </div>
+            <!-- Profile Image with subtle scale and shadow on hover -->
             <img src="./images/me2.jpg" alt="Pradip Khanal"
-              class="w-full rounded-2xl shadow-2xl relative z-10 transition-all duration-500 hover:shadow-3xl hover:shadow-[#FF4500]/30 floating" />
+              class="w-full rounded-2xl shadow-2xl relative z-10 transition-all duration-500 group-hover:scale-105 group-hover:shadow-[0_8px_40px_0_rgba(255,69,0,0.3)] floating" />
+            <!-- Decorative floating icon -->
+            <div class="absolute top-4 left-4 bg-gradient-to-br from-[#FF4500] to-[#FF6B35] rounded-full w-10 h-10 flex items-center justify-center shadow-lg animate-bounce">
+              <i class="fas fa-star text-white text-lg"></i>
+            </div>
           </div>
           <!-- Experience Badge -->
-          <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 z-20">
             <div class="text-center">
               <div class="text-2xl font-bold">2+</div>
               <div class="text-xs font-medium">Years Exp</div>
