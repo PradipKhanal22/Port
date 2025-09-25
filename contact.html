@@ -832,40 +832,30 @@
             contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
-                // Validate form
-                if (!validateForm()) {
-                    showNotification('Please fill in all required fields correctly.', 'error');
-                    return;
-                }
-
                 // Show loading state
                 buttonText.classList.add('hidden');
                 loadingText.classList.remove('hidden');
                 submitBtn.disabled = true;
                 submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
 
-                // Get form data
                 const formData = new FormData(contactForm);
-                const formObject = Object.fromEntries(formData.entries());
 
                 try {
-                    // Simulate API call
-                    await new Promise(resolve => setTimeout(resolve, 2000));
-
-                    // Success state
-                    showNotification('Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
-                    contactForm.reset();
-
-                    // Remove focus states
-                    document.querySelectorAll('.professional-input').forEach(input => {
-                        input.parentElement.classList.remove('focused');
+                    const response = await fetch(contactForm.action, {
+                        method: contactForm.method,
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
                     });
 
+                    if (response.ok) {
+                        showNotification('Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
+                        contactForm.reset();
+                    } else {
+                        showNotification('Oops! Something went wrong. Please try again later.', 'error');
+                    }
                 } catch (error) {
-                    // Error state
-                    showNotification('Oops! Something went wrong. Please try again or contact me directly.', 'error');
+                    showNotification('Oops! Something went wrong. Please try again.', 'error');
                 } finally {
-                    // Reset button state
                     buttonText.classList.remove('hidden');
                     loadingText.classList.add('hidden');
                     submitBtn.disabled = false;
