@@ -395,8 +395,7 @@
                     <a href="resume.html" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
                         <i class="fas fa-file-alt mr-2"></i>Resume
                     </a>
-                    <a href="contact.html"
-                        class="nav-link active px-4 py-2 rounded-lg transition-all duration-300">
+                    <a href="contact.html" class="nav-link active px-4 py-2 rounded-lg transition-all duration-300">
                         <i class="fas fa-envelope mr-2"></i>Contact
                     </a>
                 </div>
@@ -423,8 +422,7 @@
                     <a href="resume.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
                         <i class="fas fa-file-alt"></i><span>Resume</span>
                     </a>
-                    <a href="contact.html"
-                        class="nav-link active flex items-center space-x-3 p-3 rounded-lg">
+                    <a href="contact.html" class="nav-link active flex items-center space-x-3 p-3 rounded-lg">
                         <i class="fas fa-envelope"></i><span>Contact</span>
                     </a>
                 </div>
@@ -474,7 +472,7 @@
                             </p>
                         </div>
 
-                        <form id="contactForm" class="space-y-8">
+                        <form action="https://formspree.io/f/mjkakwll" method="POST" id="contactForm" class="space-y-8">
                             <!-- Name and Email Row -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="fade-in-up" style="animation-delay: 0.4s;">
@@ -934,8 +932,8 @@
         function showNotification(message, type = 'info') {
             const notification = document.createElement('div');
             notification.className = `fixed top-6 right-6 z-50 p-6 rounded-2xl shadow-2xl transition-all duration-500 transform translate-x-full max-w-md ${type === 'success' ? 'bg-gradient-to-r from-green-600 to-green-700 text-white' :
-                    type === 'error' ? 'bg-gradient-to-r from-red-600 to-red-700 text-white' :
-                        'bg-gradient-to-r from-blue-600 to-blue-700 text-white'
+                type === 'error' ? 'bg-gradient-to-r from-red-600 to-red-700 text-white' :
+                    'bg-gradient-to-r from-blue-600 to-blue-700 text-white'
                 }`;
 
             notification.innerHTML = `
