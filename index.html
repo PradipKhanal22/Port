@@ -10,7 +10,9 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -90,8 +92,15 @@
     }
 
     @keyframes gradient-shift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
     }
 
     .professional-card {
@@ -223,13 +232,21 @@
     }
 
     @keyframes blink {
-      0%, 50% { opacity: 1; }
-      51%, 100% { opacity: 0; }
+
+      0%,
+      50% {
+        opacity: 1;
+      }
+
+      51%,
+      100% {
+        opacity: 0;
+      }
     }
 
     /* Enhanced Professional Styles */
     .hero-section {
-      background: linear-gradient(135deg, rgb(34,34,41) 0%, rgb(25,25,31) 100%);
+      background: linear-gradient(135deg, rgb(34, 34, 41) 0%, rgb(25, 25, 31) 100%);
       position: relative;
       overflow: hidden;
     }
@@ -242,7 +259,7 @@
       right: 0;
       bottom: 0;
       background: radial-gradient(circle at 30% 20%, rgba(255, 69, 0, 0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 70% 80%, rgba(255, 107, 53, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 70% 80%, rgba(255, 107, 53, 0.08) 0%, transparent 50%);
       z-index: 0;
     }
 
@@ -331,8 +348,13 @@
     }
 
     @keyframes shimmer {
-      0% { left: -100%; }
-      100% { left: 100%; }
+      0% {
+        left: -100%;
+      }
+
+      100% {
+        left: 100%;
+      }
     }
 
     /* Skills Progress Bars */
@@ -362,7 +384,7 @@
     }
 
     ::-webkit-scrollbar-track {
-      background: rgb(34,34,41);
+      background: rgb(34, 34, 41);
     }
 
     ::-webkit-scrollbar-thumb {
@@ -496,24 +518,28 @@
   </nav>
 
   <!-- Enhanced Home Section -->
-  <section id="home" class="hero-section min-h-screen flex flex-col md:flex-row justify-between items-center px-4 md:px-12 overflow-hidden relative pt-20">
+  <section id="home"
+    class="hero-section min-h-screen flex flex-col md:flex-row justify-between items-center px-4 md:px-12 overflow-hidden relative pt-20">
     <!-- Enhanced Background Elements -->
     <div class="absolute inset-0 opacity-10">
       <div class="absolute top-20 left-20 w-32 h-32 border-2 border-[#FF4500] rounded-full animate-pulse"></div>
       <div class="absolute bottom-32 right-32 w-24 h-24 border border-[#FF4500] rounded-full floating"></div>
-      <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-[#FF4500] rounded-full opacity-30 floating" style="animation-delay: -1s;"></div>
-      <div class="absolute top-1/3 right-1/3 w-20 h-20 border border-[#FF4500] rounded-full opacity-20 floating" style="animation-delay: -2s;"></div>
+      <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-[#FF4500] rounded-full opacity-30 floating"
+        style="animation-delay: -1s;"></div>
+      <div class="absolute top-1/3 right-1/3 w-20 h-20 border border-[#FF4500] rounded-full opacity-20 floating"
+        style="animation-delay: -2s;"></div>
     </div>
-    
+
     <!-- Hero Content -->
-    <div class="hero-content w-full md:w-1/2 animate__animated animate__fadeInLeft animate__delay-1s mb-10 md:mb-0 relative z-10">
+    <div
+      class="hero-content w-full md:w-1/2 animate__animated animate__fadeInLeft animate__delay-1s mb-10 md:mb-0 relative z-10">
       <div class="space-y-6">
         <!-- Greeting -->
         <div class="space-y-2">
           <h3 class="text-[#FF4500] text-2xl font-bold tracking-wider uppercase">Hello There!</h3>
           <div class="w-20 h-1 bg-gradient-to-r from-[#FF4500] to-[#FF6B35] rounded-full"></div>
         </div>
-        
+
         <!-- Name and Title -->
         <div class="space-y-4">
           <h1 class="text-white text-5xl md:text-6xl font-bold leading-tight">
@@ -522,7 +548,7 @@
               <div class="absolute -bottom-2 left-0 w-full h-1 bg-[#FF4500] animate-pulse rounded-full"></div>
             </span>
           </h1>
-          
+
           <!-- Enhanced Typing Animation -->
           <div class="mt-6">
             <h2 class="text-white text-2xl md:text-3xl font-light flex items-center">
@@ -532,30 +558,35 @@
             </h2>
           </div>
         </div>
-        
+
         <!-- Enhanced Description -->
         <p class="text-gray-300 text-lg leading-relaxed max-w-lg">
-          A passionate <span class="text-[#FF4500] font-semibold">web developer</span> specializing in crafting beautiful, functional digital experiences. I transform creative ideas into stunning, responsive websites that deliver exceptional user experiences and drive business growth.
+          A passionate <span class="text-[#FF4500] font-semibold">web developer</span> specializing in crafting
+          beautiful, functional digital experiences. I transform creative ideas into stunning, responsive websites that
+          deliver exceptional user experiences and drive business growth.
         </p>
-        
+
         <!-- Enhanced Call-to-Action Buttons -->
         <div class="flex flex-wrap items-center gap-6 mt-8">
           <a href="#projects"
             class="bg-[#FF4500] px-8 py-4 rounded-xl text-white text-lg font-semibold cursor-pointer hover:bg-orange-700 transition-all duration-300 inline-flex items-center group btn-enhanced">
             <span>View My Work</span>
-            <svg class="ml-3 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="ml-3 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </a>
           <a href="contact.html"
             class="bg-transparent border-2 border-[#FF4500] px-8 py-4 rounded-xl text-white text-lg font-semibold cursor-pointer hover:bg-[#FF4500] transition-all duration-300 inline-flex items-center group btn-enhanced">
             <span>Hire Me</span>
-            <svg class="ml-3 w-5 h-5 transform group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+            <svg class="ml-3 w-5 h-5 transform group-hover:rotate-12 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
             </svg>
           </a>
         </div>
-        
+
         <!-- Enhanced Social Links -->
         <div class="flex items-center space-x-6 mt-10">
           <span class="text-gray-400 text-sm font-medium">Connect with me:</span>
@@ -576,15 +607,16 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Enhanced Image Section -->
-    <div class="hero-content w-full md:w-1/2 flex justify-center items-center animate__animated animate__fadeInRight animate__delay-1s relative">
+    <div
+      class="hero-content w-full md:w-1/2 flex justify-center items-center animate__animated animate__fadeInRight animate__delay-1s relative">
       <!-- Enhanced Decorative Elements -->
       <div class="absolute inset-0 flex justify-center items-center">
         <div class="w-72 h-72 md:w-80 md:h-80 border-4 border-[#FF4500]/20 rounded-full animate-pulse"></div>
         <div class="absolute w-80 h-80 md:w-96 md:h-96 border border-[#FF4500]/10 rounded-full floating"></div>
       </div>
-      
+
       <!-- Profile Image Container -->
       <div class="relative z-10 flex justify-center items-center">
         <div class="relative">
@@ -593,17 +625,19 @@
             <img src="./images/me.jpeg" alt="Pradip Khanal - Web Developer"
               class="w-full h-full object-cover object-center floating cursor-pointer transition-all duration-500 hover:scale-105" />
           </div>
-          
+
           <!-- Experience Badge -->
-          <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div
+            class="absolute -bottom-4 -right-4 bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
             <div class="text-center">
               <div class="text-2xl font-bold">2+</div>
               <div class="text-xs font-medium">Years Exp</div>
             </div>
           </div>
-          
+
           <!-- Skills Badge -->
-          <div class="absolute -top-4 -left-4 bg-gradient-to-r from-[#FF6B35] to-[#FF4500] text-white px-4 py-2 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div
+            class="absolute -top-4 -left-4 bg-gradient-to-r from-[#FF6B35] to-[#FF4500] text-white px-4 py-2 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
             <div class="text-center">
               <div class="text-sm font-bold">15+</div>
               <div class="text-xs">Projects</div>
@@ -615,13 +649,16 @@
   </section>
 
   <!-- Enhanced Statistics Section -->
-  <section class="py-20 px-4 md:px-12 bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] relative overflow-hidden" id="stats-section">
+  <section
+    class="py-20 px-4 md:px-12 bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] relative overflow-hidden"
+    id="stats-section">
     <!-- Background Effects -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute top-10 left-10 w-32 h-32 border border-[#FF4500] rounded-full floating"></div>
-      <div class="absolute bottom-10 right-10 w-24 h-24 bg-[#FF4500] rounded-full floating" style="animation-delay: -1s;"></div>
+      <div class="absolute bottom-10 right-10 w-24 h-24 bg-[#FF4500] rounded-full floating"
+        style="animation-delay: -1s;"></div>
     </div>
-    
+
     <div class="max-w-6xl mx-auto relative z-10">
       <!-- Section Header -->
       <div class="text-center mb-16">
@@ -633,52 +670,64 @@
           Here's a snapshot of my professional journey and the impact I've made
         </p>
       </div>
-      
+
       <!-- Statistics Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <!-- Years Experience -->
         <div class="stats-card group">
-          <div class="bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#FF4500]/20 transition-all duration-500 transform hover:-translate-y-2 border border-gray-700 hover:border-[#FF4500]/30">
+          <div
+            class="bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#FF4500]/20 transition-all duration-500 transform hover:-translate-y-2 border border-gray-700 hover:border-[#FF4500]/30">
             <div class="mb-4">
-              <i class="fas fa-calendar-alt text-4xl text-[#FF4500] group-hover:scale-110 transition-transform duration-300"></i>
+              <i
+                class="fas fa-calendar-alt text-4xl text-[#FF4500] group-hover:scale-110 transition-transform duration-300"></i>
             </div>
-            <div class="text-4xl md:text-5xl font-bold text-[#FF4500] mb-2 counter-up" data-target="2" data-suffix="+">2</div>
+            <div class="text-4xl md:text-5xl font-bold text-[#FF4500] mb-2 counter-up" data-target="2" data-suffix="+">2
+            </div>
             <p class="text-white text-lg font-medium">Years Experience</p>
             <p class="text-gray-400 text-sm mt-2">Building web solutions</p>
           </div>
         </div>
-        
+
         <!-- Projects Completed -->
         <div class="stats-card group">
-          <div class="bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#FF4500]/20 transition-all duration-500 transform hover:-translate-y-2 border border-gray-700 hover:border-[#FF4500]/30">
+          <div
+            class="bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#FF4500]/20 transition-all duration-500 transform hover:-translate-y-2 border border-gray-700 hover:border-[#FF4500]/30">
             <div class="mb-4">
-              <i class="fas fa-project-diagram text-4xl text-[#FF4500] group-hover:scale-110 transition-transform duration-300"></i>
+              <i
+                class="fas fa-project-diagram text-4xl text-[#FF4500] group-hover:scale-110 transition-transform duration-300"></i>
             </div>
-            <div class="text-4xl md:text-5xl font-bold text-[#FF4500] mb-2 counter-up" data-target="15" data-suffix="+">0</div>
+            <div class="text-4xl md:text-5xl font-bold text-[#FF4500] mb-2 counter-up" data-target="15" data-suffix="+">
+              0</div>
             <p class="text-white text-lg font-medium">Projects Completed</p>
             <p class="text-gray-400 text-sm mt-2">Successful deliveries</p>
           </div>
         </div>
-        
+
         <!-- Happy Clients -->
         <div class="stats-card group">
-          <div class="bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#FF4500]/20 transition-all duration-500 transform hover:-translate-y-2 border border-gray-700 hover:border-[#FF4500]/30">
+          <div
+            class="bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#FF4500]/20 transition-all duration-500 transform hover:-translate-y-2 border border-gray-700 hover:border-[#FF4500]/30">
             <div class="mb-4">
-              <i class="fas fa-users text-4xl text-[#FF4500] group-hover:scale-110 transition-transform duration-300"></i>
+              <i
+                class="fas fa-users text-4xl text-[#FF4500] group-hover:scale-110 transition-transform duration-300"></i>
             </div>
-            <div class="text-4xl md:text-5xl font-bold text-[#FF4500] mb-2 counter-up" data-target="10" data-suffix="+">0</div>
+            <div class="text-4xl md:text-5xl font-bold text-[#FF4500] mb-2 counter-up" data-target="10" data-suffix="+">
+              0</div>
             <p class="text-white text-lg font-medium">Happy Clients</p>
             <p class="text-gray-400 text-sm mt-2">Satisfied customers</p>
           </div>
         </div>
-        
+
         <!-- Support Hours -->
         <div class="stats-card group">
-          <div class="bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#FF4500]/20 transition-all duration-500 transform hover:-translate-y-2 border border-gray-700 hover:border-[#FF4500]/30">
+          <div
+            class="bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#FF4500]/20 transition-all duration-500 transform hover:-translate-y-2 border border-gray-700 hover:border-[#FF4500]/30">
             <div class="mb-4">
-              <i class="fas fa-headset text-4xl text-[#FF4500] group-hover:scale-110 transition-transform duration-300"></i>
+              <i
+                class="fas fa-headset text-4xl text-[#FF4500] group-hover:scale-110 transition-transform duration-300"></i>
             </div>
-            <div class="text-4xl md:text-5xl font-bold text-[#FF4500] mb-2 counter-up" data-target="24" data-suffix="/7">0</div>
+            <div class="text-4xl md:text-5xl font-bold text-[#FF4500] mb-2 counter-up" data-target="24"
+              data-suffix="/7">0</div>
             <p class="text-white text-lg font-medium">Support Available</p>
             <p class="text-gray-400 text-sm mt-2">Always here to help</p>
           </div>
@@ -688,13 +737,15 @@
   </section>
 
   <!-- Enhanced Skills Section -->
-  <section class="py-20 px-4 md:px-12 bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(25,25,31)] relative overflow-hidden">
+  <section
+    class="py-20 px-4 md:px-12 bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(25,25,31)] relative overflow-hidden">
     <!-- Background Effects -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute top-20 right-20 w-40 h-40 border border-[#FF4500] rounded-full floating"></div>
-      <div class="absolute bottom-20 left-20 w-32 h-32 bg-[#FF4500] rounded-full floating" style="animation-delay: -2s;"></div>
+      <div class="absolute bottom-20 left-20 w-32 h-32 bg-[#FF4500] rounded-full floating"
+        style="animation-delay: -2s;"></div>
     </div>
-    
+
     <div class="max-w-6xl mx-auto relative z-10">
       <!-- Section Header -->
       <div class="text-center mb-16">
@@ -706,7 +757,7 @@
           Technologies and tools I use to bring your ideas to life
         </p>
       </div>
-      
+
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Technical Skills -->
         <div class="space-y-8">
@@ -714,7 +765,7 @@
             <i class="fas fa-code text-[#FF4500] mr-3"></i>
             Technical Skills
           </h3>
-          
+
           <!-- Skill Items -->
           <div class="space-y-6">
             <div class="skill-item">
@@ -723,76 +774,88 @@
                 <span class="text-[#FF4500] font-bold">90%</span>
               </div>
               <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                <div class="skill-progress bg-gradient-to-r from-[#FF4500] to-[#FF6B35] h-3 rounded-full transition-all duration-1000 ease-out" data-percentage="90%"></div>
+                <div
+                  class="skill-progress bg-gradient-to-r from-[#FF4500] to-[#FF6B35] h-3 rounded-full transition-all duration-1000 ease-out"
+                  data-percentage="90%"></div>
               </div>
             </div>
-            
+
             <div class="skill-item">
               <div class="flex justify-between mb-2">
                 <span class="text-white font-medium">JavaScript & React</span>
                 <span class="text-[#FF4500] font-bold">85%</span>
               </div>
               <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                <div class="skill-progress bg-gradient-to-r from-[#FF4500] to-[#FF6B35] h-3 rounded-full transition-all duration-1000 ease-out" data-percentage="85%"></div>
+                <div
+                  class="skill-progress bg-gradient-to-r from-[#FF4500] to-[#FF6B35] h-3 rounded-full transition-all duration-1000 ease-out"
+                  data-percentage="85%"></div>
               </div>
             </div>
-            
+
             <div class="skill-item">
               <div class="flex justify-between mb-2">
                 <span class="text-white font-medium">HTML5 & CSS3</span>
                 <span class="text-[#FF4500] font-bold">95%</span>
               </div>
               <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                <div class="skill-progress bg-gradient-to-r from-[#FF4500] to-[#FF6B35] h-3 rounded-full transition-all duration-1000 ease-out" data-percentage="95%"></div>
+                <div
+                  class="skill-progress bg-gradient-to-r from-[#FF4500] to-[#FF6B35] h-3 rounded-full transition-all duration-1000 ease-out"
+                  data-percentage="95%"></div>
               </div>
             </div>
-            
+
             <div class="skill-item">
               <div class="flex justify-between mb-2">
                 <span class="text-white font-medium">MySQL & Database</span>
                 <span class="text-[#FF4500] font-bold">80%</span>
               </div>
               <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                <div class="skill-progress bg-gradient-to-r from-[#FF4500] to-[#FF6B35] h-3 rounded-full transition-all duration-1000 ease-out" data-percentage="80%"></div>
+                <div
+                  class="skill-progress bg-gradient-to-r from-[#FF4500] to-[#FF6B35] h-3 rounded-full transition-all duration-1000 ease-out"
+                  data-percentage="80%"></div>
               </div>
             </div>
           </div>
         </div>
-        
+
         <!-- Professional Skills -->
         <div class="space-y-8">
           <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
             <i class="fas fa-user-tie text-[#FF4500] mr-3"></i>
             Professional Skills
           </h3>
-          
+
           <!-- Professional Skills Grid -->
           <div class="grid grid-cols-2 gap-6">
-            <div class="professional-skill-card bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] p-6 rounded-xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-300 text-center group">
+            <div
+              class="professional-skill-card bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] p-6 rounded-xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-300 text-center group">
               <div class="text-4xl text-[#FF4500] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <i class="fas fa-lightbulb"></i>
               </div>
               <h4 class="text-white font-bold mb-2">Problem Solving</h4>
               <p class="text-gray-400 text-sm">Creative solutions to complex challenges</p>
             </div>
-            
-            <div class="professional-skill-card bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] p-6 rounded-xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-300 text-center group">
+
+            <div
+              class="professional-skill-card bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] p-6 rounded-xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-300 text-center group">
               <div class="text-4xl text-[#FF4500] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <i class="fas fa-users"></i>
               </div>
               <h4 class="text-white font-bold mb-2">Team Work</h4>
               <p class="text-gray-400 text-sm">Collaborative development approach</p>
             </div>
-            
-            <div class="professional-skill-card bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] p-6 rounded-xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-300 text-center group">
+
+            <div
+              class="professional-skill-card bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] p-6 rounded-xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-300 text-center group">
               <div class="text-4xl text-[#FF4500] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <i class="fas fa-clock"></i>
               </div>
               <h4 class="text-white font-bold mb-2">Time Management</h4>
               <p class="text-gray-400 text-sm">Efficient project delivery</p>
             </div>
-            
-            <div class="professional-skill-card bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] p-6 rounded-xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-300 text-center group">
+
+            <div
+              class="professional-skill-card bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] p-6 rounded-xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-300 text-center group">
               <div class="text-4xl text-[#FF4500] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <i class="fas fa-comments"></i>
               </div>
@@ -806,7 +869,8 @@
   </section>
 
   <!-- Enhanced Services Preview Section -->
-  <section class="py-20 px-4 md:px-12 bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] relative overflow-hidden">
+  <section
+    class="py-20 px-4 md:px-12 bg-gradient-to-br from-[rgb(40,40,48)] to-[rgb(35,35,42)] relative overflow-hidden">
     <div class="max-w-6xl mx-auto">
       <!-- Section Header -->
       <div class="text-center mb-16">
@@ -818,52 +882,62 @@
           Professional web development services tailored to your business needs
         </p>
       </div>
-      
+
       <!-- Services Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Web Development -->
-        <div class="service-card bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-500 transform hover:-translate-y-2 group">
+        <div
+          class="service-card bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-500 transform hover:-translate-y-2 group">
           <div class="text-5xl text-[#FF4500] mb-6 group-hover:scale-110 transition-transform duration-300">
             <i class="fas fa-laptop-code"></i>
           </div>
           <h3 class="text-xl font-bold text-white mb-4">Web Development</h3>
-          <p class="text-gray-400 mb-6">Custom websites and web applications built with modern technologies and best practices.</p>
-          <a href="services.html" class="text-[#FF4500] font-semibold hover:text-[#FF6B35] transition-colors inline-flex items-center">
+          <p class="text-gray-400 mb-6">Custom websites and web applications built with modern technologies and best
+            practices.</p>
+          <a href="services.html"
+            class="text-[#FF4500] font-semibold hover:text-[#FF6B35] transition-colors inline-flex items-center">
             Learn More <i class="fas fa-arrow-right ml-2"></i>
           </a>
         </div>
-        
+
         <!-- UI/UX Design -->
-        <div class="service-card bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-500 transform hover:-translate-y-2 group">
+        <div
+          class="service-card bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-500 transform hover:-translate-y-2 group">
           <div class="text-5xl text-[#FF4500] mb-6 group-hover:scale-110 transition-transform duration-300">
             <i class="fas fa-paint-brush"></i>
           </div>
           <h3 class="text-xl font-bold text-white mb-4">UI/UX Design</h3>
-          <p class="text-gray-400 mb-6">Beautiful and intuitive user interfaces that provide exceptional user experiences.</p>
-          <a href="services.html" class="text-[#FF4500] font-semibold hover:text-[#FF6B35] transition-colors inline-flex items-center">
+          <p class="text-gray-400 mb-6">Beautiful and intuitive user interfaces that provide exceptional user
+            experiences.</p>
+          <a href="services.html"
+            class="text-[#FF4500] font-semibold hover:text-[#FF6B35] transition-colors inline-flex items-center">
             Learn More <i class="fas fa-arrow-right ml-2"></i>
           </a>
         </div>
-        
+
         <!-- E-commerce -->
-        <div class="service-card bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-500 transform hover:-translate-y-2 group">
+        <div
+          class="service-card bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(40,40,48)] p-8 rounded-2xl border border-gray-700 hover:border-[#FF4500]/30 transition-all duration-500 transform hover:-translate-y-2 group">
           <div class="text-5xl text-[#FF4500] mb-6 group-hover:scale-110 transition-transform duration-300">
             <i class="fas fa-shopping-cart"></i>
           </div>
           <h3 class="text-xl font-bold text-white mb-4">E-commerce Solutions</h3>
-          <p class="text-gray-400 mb-6">Complete online store solutions with payment integration and inventory management.</p>
-          <a href="services.html" class="text-[#FF4500] font-semibold hover:text-[#FF6B35] transition-colors inline-flex items-center">
+          <p class="text-gray-400 mb-6">Complete online store solutions with payment integration and inventory
+            management.</p>
+          <a href="services.html"
+            class="text-[#FF4500] font-semibold hover:text-[#FF6B35] transition-colors inline-flex items-center">
             Learn More <i class="fas fa-arrow-right ml-2"></i>
           </a>
         </div>
       </div>
-      
+
       <!-- Call to Action -->
       <div class="text-center mt-12">
-        <a href="contact.html" 
-           class="bg-gradient-to-r from-[#FF4500] to-[#FF6B35] px-8 py-4 rounded-xl text-white text-lg font-semibold cursor-pointer hover:from-[#FF6B35] hover:to-[#FF4500] transition-all duration-300 inline-flex items-center group btn-enhanced shadow-lg hover:shadow-xl">
+        <a href="contact.html"
+          class="bg-gradient-to-r from-[#FF4500] to-[#FF6B35] px-8 py-4 rounded-xl text-white text-lg font-semibold cursor-pointer hover:from-[#FF6B35] hover:to-[#FF4500] transition-all duration-300 inline-flex items-center group btn-enhanced shadow-lg hover:shadow-xl">
           <span>Start Your Project</span>
-          <svg class="ml-3 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="ml-3 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
         </a>
@@ -875,7 +949,8 @@
   <section id="about" class="min-h-screen py-20 px-4 md:px-12 bg-[rgb(40,40,48)]">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-[#FF4500] text-3xl md:text-4xl font-bold mb-4 animate__animated animate__fadeInDown">ABOUT ME</h2>
+        <h2 class="text-[#FF4500] text-3xl md:text-4xl font-bold mb-4 animate__animated animate__fadeInDown">ABOUT ME
+        </h2>
         <div class="w-20 h-1 bg-[#FF4500] mx-auto mb-6 animate__animated animate__fadeInDown"></div>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto">
           Passionate about creating digital solutions that make a difference
@@ -891,7 +966,8 @@
           <h3 class="text-2xl font-bold text-white mb-4">Who am I ?</h3>
           <p class="text-gray-300 mb-6 text-lg text-justify">
             I’m Pradip Khanal, a dedicated web developer from Nepal with over 2 years of hands-on experience crafting
-            modern, responsive websites and dynamic web applications. While my expertise shines in front-end development, I
+            modern, responsive websites and dynamic web applications. While my expertise shines in front-end
+            development, I
             also bring solid back-end skills to deliver seamless, full-stack solutions. Passionate about clean code and
             user-centric design, I strive to create digital experiences that are both visually stunning and highly
             functional.
@@ -900,17 +976,19 @@
           <div class="grid grid-cols-2 gap-4 mb-6">
             <div>
               <p class="text-gray-400"><span class="text-[#FF4500] font-semibold">Name:</span> Pradip Khanal</p>
-              <p class="text-gray-400"><span class="text-[#FF4500] font-semibold">Email:</span>
-                khanalpradip74@gmail.com</p>
+              <a href="mailto:khanalpradip74@gmail.com" class="text-gray-400 hover:text-[#FF4500]"><span
+                  class="text-[#FF4500] font-semibold">Email:</span>
+                khanalpradip74@gmail.com</a>
             </div>
             <div>
               <p class="text-gray-400"><span class="text-[#FF4500] font-semibold">From:</span> Kawasoti-9, Nawalpur,
                 Nepal</p>
-              <p class="text-gray-400"><span class="text-[#FF4500] font-semibold">Phone:</span> +977 9804453481</p>
+              <a href="tel:9804453481" class="text-gray-400 hover:text-[#FF4500]"><span class="text-[#FF4500] font-semibold">Phone:</span>
+                +977 9804453481</a>
             </div>
           </div>
 
-          <a href="./resume.html"
+          <a href="Pradip_Khanal_CV%20(1).pdf" download="Pradip_Khanal_CV%20(1).pdf"
             class="bg-[#FF4500] px-6 py-2 rounded-lg text-white text-lg font-semibold inline-block hover:bg-orange-700 transition duration-300 hover:scale-105">Download
             CV</a>
         </div>
@@ -922,7 +1000,8 @@
   <section class="py-20 px-4 md:px-12 bg-[rgb(34,34,41)]">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-[#FF4500] text-3xl md:text-4xl font-bold mb-4 animate__animated animate__fadeInDown">WHAT I DO</h2>
+        <h2 class="text-[#FF4500] text-3xl md:text-4xl font-bold mb-4 animate__animated animate__fadeInDown">WHAT I DO
+        </h2>
         <div class="w-20 h-1 bg-[#FF4500] mx-auto mb-6 animate__animated animate__fadeInDown"></div>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto">
           I offer comprehensive web development services to bring your digital vision to life
@@ -931,41 +1010,52 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Web Development -->
-        <div class="bg-[rgb(40,40,48)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 hover:transform hover:scale-105 animate__animated animate__fadeInUp">
+        <div
+          class="bg-[rgb(40,40,48)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 hover:transform hover:scale-105 animate__animated animate__fadeInUp">
           <div class="w-16 h-16 bg-[#FF4500]/20 rounded-full flex items-center justify-center mb-6">
             <svg class="w-8 h-8 text-[#FF4500]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-4">Web Development</h3>
           <p class="text-gray-400 leading-relaxed">
-            Custom websites and web applications built with modern technologies, ensuring responsive design and optimal performance.
+            Custom websites and web applications built with modern technologies, ensuring responsive design and optimal
+            performance.
           </p>
         </div>
 
         <!-- Frontend Development -->
-        <div class="bg-[rgb(40,40,48)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 hover:transform hover:scale-105 animate__animated animate__fadeInUp animate__delay-1s">
+        <div
+          class="bg-[rgb(40,40,48)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 hover:transform hover:scale-105 animate__animated animate__fadeInUp animate__delay-1s">
           <div class="w-16 h-16 bg-[#FF4500]/20 rounded-full flex items-center justify-center mb-6">
             <svg class="w-8 h-8 text-[#FF4500]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+              </path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-4">Frontend Development</h3>
           <p class="text-gray-400 leading-relaxed">
-            Creating stunning user interfaces with HTML, CSS, JavaScript, and modern frameworks for exceptional user experiences.
+            Creating stunning user interfaces with HTML, CSS, JavaScript, and modern frameworks for exceptional user
+            experiences.
           </p>
         </div>
 
         <!-- Backend Development -->
-        <div class="bg-[rgb(40,40,48)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 hover:transform hover:scale-105 animate__animated animate__fadeInUp animate__delay-2s">
+        <div
+          class="bg-[rgb(40,40,48)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 hover:transform hover:scale-105 animate__animated animate__fadeInUp animate__delay-2s">
           <div class="w-16 h-16 bg-[#FF4500]/20 rounded-full flex items-center justify-center mb-6">
             <svg class="w-8 h-8 text-[#FF4500]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01">
+              </path>
             </svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-4">Backend Development</h3>
           <p class="text-gray-400 leading-relaxed">
-            Robust server-side solutions using PHP, Laravel, and MySQL to power your applications with secure, scalable architecture.
+            Robust server-side solutions using PHP, Laravel, and MySQL to power your applications with secure, scalable
+            architecture.
           </p>
         </div>
       </div>
@@ -974,7 +1064,8 @@
         <a href="services.html"
           class="bg-[#FF4500] px-8 py-3 rounded-lg text-white text-lg font-semibold inline-flex items-center hover:bg-orange-700 transition-all duration-300 hover:scale-105 shadow-lg group">
           <span>View All Services</span>
-          <svg class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
         </a>
@@ -987,10 +1078,11 @@
     <!-- Background decorations -->
     <div class="absolute top-20 left-20 w-32 h-32 border border-[#FF4500]/10 rounded-full"></div>
     <div class="absolute bottom-20 right-20 w-40 h-40 bg-[#FF4500]/5 rounded-full"></div>
-    
+
     <div class="max-w-6xl mx-auto relative z-10">
       <div class="text-center mb-16">
-        <h2 class="text-[#FF4500] text-3xl md:text-4xl font-bold mb-4 animate__animated animate__fadeInDown">MY SKILLS</h2>
+        <h2 class="text-[#FF4500] text-3xl md:text-4xl font-bold mb-4 animate__animated animate__fadeInDown">MY SKILLS
+        </h2>
         <div class="w-20 h-1 bg-[#FF4500] mx-auto mb-6 animate__animated animate__fadeInDown"></div>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto">
           Proficient in modern technologies and frameworks to deliver high-quality solutions
@@ -1004,7 +1096,8 @@
             <h3 class="text-2xl font-bold text-white mb-8 flex items-center">
               <div class="w-8 h-8 bg-[#FF4500]/20 rounded-full flex items-center justify-center mr-3">
                 <svg class="w-4 h-4 text-[#FF4500]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                 </svg>
               </div>
               Technical Skills
@@ -1067,7 +1160,9 @@
             <h3 class="text-2xl font-bold text-white mb-8 flex items-center">
               <div class="w-8 h-8 bg-[#FF4500]/20 rounded-full flex items-center justify-center mr-3">
                 <svg class="w-4 h-4 text-[#FF4500]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
+                  </path>
                 </svg>
               </div>
               Professional Skills
@@ -1132,10 +1227,11 @@
     <!-- Background decorations -->
     <div class="absolute top-10 left-10 w-64 h-64 border border-[#FF4500]/5 rounded-full"></div>
     <div class="absolute bottom-10 right-10 w-48 h-48 bg-[#FF4500]/5 rounded-full"></div>
-    
+
     <div class="max-w-6xl mx-auto relative z-10">
       <div class="text-center mb-16">
-        <h2 class="text-[#FF4500] text-3xl md:text-4xl font-bold mb-4 animate__animated animate__fadeInDown">MY PROJECTS</h2>
+        <h2 class="text-[#FF4500] text-3xl md:text-4xl font-bold mb-4 animate__animated animate__fadeInDown">MY PROJECTS
+        </h2>
         <div class="w-20 h-1 bg-[#FF4500] mx-auto mb-6 animate__animated animate__fadeInDown"></div>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto">
           Showcasing some of my recent work and creative solutions
@@ -1149,29 +1245,39 @@
           <div class="h-48 overflow-hidden relative">
             <img src="images/s1.png" alt="E-Commerce Website"
               class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div
+              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
               <div class="flex space-x-2">
                 <a href="#" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                   </svg>
                 </a>
                 <a href="#" class="bg-white/20 p-2 rounded-full text-white hover:bg-white/30 transition-colors">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
                   </svg>
                 </a>
               </div>
             </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">E-Commerce Website</h3>
-            <p class="text-gray-400 text-sm mb-4 leading-relaxed">A full-featured store built using Laravel and Vue.js with integrated payment support and modern UI.</p>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">E-Commerce
+              Website</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">A full-featured store built using Laravel and Vue.js
+              with integrated payment support and modern UI.</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
-              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind
+                CSS</span>
               <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">MySQL</span>
             </div>
           </div>
@@ -1183,29 +1289,39 @@
           <div class="h-48 overflow-hidden relative">
             <img src="images/s2.png" alt="Admin Dashboard"
               class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div
+              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
               <div class="flex space-x-2">
                 <a href="#" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                   </svg>
                 </a>
                 <a href="#" class="bg-white/20 p-2 rounded-full text-white hover:bg-white/30 transition-colors">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
                   </svg>
                 </a>
               </div>
             </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">Admin Dashboard</h3>
-            <p class="text-gray-400 text-sm mb-4 leading-relaxed">A powerful backend system for analytics and user management with real-time data visualization.</p>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">Admin Dashboard
+            </h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">A powerful backend system for analytics and user
+              management with real-time data visualization.</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
-              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind
+                CSS</span>
               <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
             </div>
           </div>
@@ -1217,18 +1333,25 @@
           <div class="h-48 overflow-hidden relative">
             <img src="images/s3.png" alt="NutriCare"
               class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div
+              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
               <div class="flex space-x-2">
                 <a href="#" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                   </svg>
                 </a>
                 <a href="#" class="bg-white/20 p-2 rounded-full text-white hover:bg-white/30 transition-colors">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
                   </svg>
                 </a>
               </div>
@@ -1236,7 +1359,8 @@
           </div>
           <div class="p-6">
             <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">NutriCare</h3>
-            <p class="text-gray-400 text-sm mb-4 leading-relaxed">A product landing site for premium health supplements with modern design and smooth interactions.</p>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">A product landing site for premium health supplements
+              with modern design and smooth interactions.</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
               <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">MySQL</span>
@@ -1251,7 +1375,8 @@
         <a href="#"
           class="bg-[#FF4500] px-8 py-4 rounded-lg text-white text-lg font-semibold inline-flex items-center hover:bg-orange-700 transition-all duration-300 hover:scale-105 shadow-lg group">
           <span>View All Projects</span>
-          <svg class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
         </a>
@@ -1263,7 +1388,8 @@
   <section class="py-20 px-4 md:px-12 bg-[rgb(40,40,48)]">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-[#FF4500] text-3xl md:text-4xl font-bold mb-4 animate__animated animate__fadeInDown">CLIENT TESTIMONIALS</h2>
+        <h2 class="text-[#FF4500] text-3xl md:text-4xl font-bold mb-4 animate__animated animate__fadeInDown">CLIENT
+          TESTIMONIALS</h2>
         <div class="w-20 h-1 bg-[#FF4500] mx-auto mb-6 animate__animated animate__fadeInDown"></div>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto">
           What my clients say about working with me
@@ -1272,17 +1398,20 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Testimonial 1 -->
-        <div class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 animate__animated animate__fadeInUp">
+        <div
+          class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 animate__animated animate__fadeInUp">
           <div class="flex items-center mb-6">
             <div class="flex text-[#FF4500] text-lg">
               ★★★★★
             </div>
           </div>
           <p class="text-gray-300 leading-relaxed mb-6 italic">
-            "Pradip delivered an exceptional e-commerce website that exceeded our expectations. His attention to detail and technical expertise made our project a huge success."
+            "Pradip delivered an exceptional e-commerce website that exceeded our expectations. His attention to detail
+            and technical expertise made our project a huge success."
           </p>
           <div class="flex items-center">
-            <img src="./images/imgae6.png" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
+            <img src="./images/imgae6.png" alt="Sarah Johnson"
+              class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
             <div>
               <h4 class="text-white font-semibold">Sarah Johnson</h4>
               <p class="text-gray-400 text-sm">E-commerce Business Owner</p>
@@ -1291,17 +1420,20 @@
         </div>
 
         <!-- Testimonial 2 -->
-        <div class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+        <div
+          class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-1s">
           <div class="flex items-center mb-6">
             <div class="flex text-[#FF4500] text-lg">
               ★★★★★
             </div>
           </div>
           <p class="text-gray-300 leading-relaxed mb-6 italic">
-            "Working with Pradip was a fantastic experience. He understood our requirements perfectly and delivered a clean, modern website that our users love."
+            "Working with Pradip was a fantastic experience. He understood our requirements perfectly and delivered a
+            clean, modern website that our users love."
           </p>
           <div class="flex items-center">
-            <img src="./images/imgae5.png" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
+            <img src="./images/imgae5.png" alt="Sarah Johnson"
+              class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
             <div>
               <h4 class="text-white font-semibold">Mike Chen</h4>
               <p class="text-gray-400 text-sm">Startup Founder</p>
@@ -1310,17 +1442,20 @@
         </div>
 
         <!-- Testimonial 3 -->
-        <div class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-2s">
+        <div
+          class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-2s">
           <div class="flex items-center mb-6">
             <div class="flex text-[#FF4500] text-lg">
               ★★★★★
             </div>
           </div>
           <p class="text-gray-300 leading-relaxed mb-6 italic">
-            "Pradip's expertise in Laravel and modern web technologies helped us build a robust admin dashboard. Highly recommended for any web development project."
+            "Pradip's expertise in Laravel and modern web technologies helped us build a robust admin dashboard. Highly
+            recommended for any web development project."
           </p>
           <div class="flex items-center">
-           <img src="./images/image3.png" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
+            <img src="./images/image3.png" alt="Sarah Johnson"
+              class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
             <div>
               <h4 class="text-white font-semibold">Amanda Rodriguez</h4>
               <p class="text-gray-400 text-sm">Project Manager</p>
@@ -1332,96 +1467,96 @@
   </section>
 
 
-<!-- Scroll to Top -->
+  <!-- Scroll to Top -->
   <!-- Professional Footer -->
   <footer class="professional-footer py-16 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Brand Section -->
-                <div class="footer-section fade-in-up">
-                    <h3 class="text-2xl font-bold font-display professional-gradient-text mb-4">
-                        <i class="fas fa-code mr-2"></i>Pradip Khanal
-                    </h3>
-                    <p class="text-gray-400 mb-4 leading-relaxed">
-                        Passionate developer creating innovative solutions with modern technologies.
-                        Let's build something amazing together.
-                    </p>
-                    <div class="flex space-x-4 text-white">
-                        <a href="https://github.com/PradipKhanal22" class="social-link" aria-label="GitHub">
-                            <i class="fab fa-github text-lg"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/pradip-khanal-92a97333a" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in text-lg"></i>
-                        </a>
-                        <a href="https://facebook.com/pradip.khanal.7528" class="social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook-f text-lg"></i>
-                        </a>
-                        <a href="https://instagram.com/pradipkhanal_25" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram text-lg"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="footer-section fade-in-up" style="animation-delay: 0.2s;">
-                    <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Quick Links</h4>
-                    <a href="index.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-                        <i class="fas fa-home mr-2"></i>Home
-                    </a>
-                    <a href="about.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-                        <i class="fas fa-user mr-2"></i>About
-                    </a>
-                    <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-                        <i class="fas fa-cogs mr-2"></i>Services
-                    </a>
-                    <a href="resume.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-                        <i class="fas fa-file-alt mr-2"></i>Resume
-                    </a>
-                </div>
-
-                <!-- Services -->
-                <div class="footer-section fade-in-up" style="animation-delay: 0.4s;">
-                    <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Services</h4>
-                    <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-                        <i class="fas fa-laptop-code mr-2"></i>Web Development
-                    </a>
-                    <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-                        <i class="fas fa-mobile-alt mr-2"></i>Mobile Apps
-                    </a>
-                    <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-                        <i class="fas fa-paint-brush mr-2"></i>UI/UX Design
-                    </a>
-                    <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-                        <i class="fas fa-search mr-2"></i>SEO Optimization
-                    </a>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="footer-section fade-in-up" style="animation-delay: 0.6s;">
-                    <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Get In Touch</h4>
-                    <div class="text-gray-400 mb-2">
-                        <i class="fas fa-envelope mr-2"></i>
-                        <span>khanalpradip74@gmail.com</span>
-                    </div>
-                    <div class="text-gray-400 mb-2">
-                        <i class="fas fa-phone mr-2"></i>
-                        <span>+977 9804453581</span>
-                    </div>
-                    <div class="text-gray-400 mb-2">
-                        <i class="fas fa-map-marker-alt mr-2"></i>
-                        <span>Kawasoti-9, Nawalpur, Nepal</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 mt-12 pt-8 text-center fade-in-up" style="animation-delay: 0.8s;">
-                <p class="text-gray-400">
-                    © 2025 Pradip Khanal. All rights reserved.
-                </p>
-            </div>
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Brand Section -->
+        <div class="footer-section fade-in-up">
+          <h3 class="text-2xl font-bold font-display professional-gradient-text mb-4">
+            <i class="fas fa-code mr-2"></i>Pradip Khanal
+          </h3>
+          <p class="text-gray-400 mb-4 leading-relaxed">
+            Passionate developer creating innovative solutions with modern technologies.
+            Let's build something amazing together.
+          </p>
+          <div class="flex space-x-4 text-white">
+            <a href="https://github.com/PradipKhanal22" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github text-lg"></i>
+            </a>
+            <a href="https://linkedin.com/in/pradip-khanal-92a97333a" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in text-lg"></i>
+            </a>
+            <a href="https://facebook.com/pradip.khanal.7528" class="social-link" aria-label="Facebook">
+              <i class="fab fa-facebook-f text-lg"></i>
+            </a>
+            <a href="https://instagram.com/pradipkhanal_25" class="social-link" aria-label="Instagram">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+          </div>
         </div>
-    </footer>
+
+        <!-- Quick Links -->
+        <div class="footer-section fade-in-up" style="animation-delay: 0.2s;">
+          <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Quick Links</h4>
+          <a href="index.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+            <i class="fas fa-home mr-2"></i>Home
+          </a>
+          <a href="about.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+            <i class="fas fa-user mr-2"></i>About
+          </a>
+          <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+            <i class="fas fa-cogs mr-2"></i>Services
+          </a>
+          <a href="resume.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+            <i class="fas fa-file-alt mr-2"></i>Resume
+          </a>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-section fade-in-up" style="animation-delay: 0.4s;">
+          <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Services</h4>
+          <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+            <i class="fas fa-laptop-code mr-2"></i>Web Development
+          </a>
+          <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+            <i class="fas fa-mobile-alt mr-2"></i>Mobile Apps
+          </a>
+          <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+            <i class="fas fa-paint-brush mr-2"></i>UI/UX Design
+          </a>
+          <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+            <i class="fas fa-search mr-2"></i>SEO Optimization
+          </a>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section fade-in-up" style="animation-delay: 0.6s;">
+          <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Get In Touch</h4>
+          <div class="text-gray-400 mb-2">
+            <i class="fas fa-envelope mr-2"></i>
+            <a href="mailto:khanalpradip74@gmail.com" class="hover:text-[#FF4500]">khanalpradip74@gmail.com</a>
+          </div>
+          <div class="text-gray-400 mb-2">
+            <i class="fas fa-phone mr-2"></i>
+            <a href="tel:9804453481" class="hover:text-[#FF4500]">+977 9804453581</a>
+          </div>
+          <div class="text-gray-400 mb-2">
+            <i class="fas fa-map-marker-alt mr-2"></i>
+            <span>Kawasoti-9, Nawalpur, Nepal</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center fade-in-up" style="animation-delay: 0.8s;">
+        <p class="text-gray-400">
+          © 2025 Pradip Khanal. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
 
   <!-- Professional Scroll to Top Button -->
   <button id="scrollToTopBtn"
@@ -1453,34 +1588,34 @@
         menuIcon.className = 'fas fa-bars';
       });
     });
-    
+
     // Scroll to top button
     const topBtn = document.getElementById("scrollToTopBtn");
     window.onscroll = () => {
-        topBtn.classList.toggle("hidden", window.scrollY < 20);
+      topBtn.classList.toggle("hidden", window.scrollY < 20);
     };
     topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-    
+
     // Enhanced Typing Animation
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const typedTextElement = document.getElementById("typed-text");
       const roles = [
         "Full Stack Developer",
-        "Web Developer", 
+        "Web Developer",
         "PHP Developer",
         "Laravel Expert",
         "Problem Solver",
         "Creative Thinker"
       ];
-      
+
       let roleIndex = 0;
       let charIndex = 0;
       let isDeleting = false;
       let typeSpeed = 150;
-      
+
       function typeWriter() {
         const currentRole = roles[roleIndex];
-        
+
         if (isDeleting) {
           // Deleting characters
           typedTextElement.textContent = currentRole.substring(0, charIndex - 1);
@@ -1492,11 +1627,11 @@
           charIndex++;
           typeSpeed = 150;
         }
-        
+
         // When word is complete
         if (!isDeleting && charIndex === currentRole.length) {
           setTimeout(() => { isDeleting = true; }, 2000); // Pause before deleting
-        } 
+        }
         // When word is fully deleted
         else if (isDeleting && charIndex === 0) {
           isDeleting = false;
@@ -1504,27 +1639,27 @@
           setTimeout(typeWriter, 500); // Pause before typing next word
           return;
         }
-        
+
         setTimeout(typeWriter, typeSpeed);
       }
-      
+
       // Start typing animation with initial delay
       setTimeout(typeWriter, 1500);
     });
-    
+
     // Enhanced Counter Animation with proper functionality
     function animateCounters() {
       const counters = document.querySelectorAll('.counter-up');
-      
+
       counters.forEach(counter => {
         const target = parseInt(counter.getAttribute('data-target'));
         const suffix = counter.getAttribute('data-suffix') || '';
         let current = 0;
         const increment = target / 60; // Smoother animation
-        
+
         // Reset counter to 0 before starting
         counter.textContent = '0';
-        
+
         const updateCounter = () => {
           if (current < target) {
             current += increment;
@@ -1535,19 +1670,19 @@
             counter.textContent = target + suffix;
           }
         };
-        
+
         // Add a small delay for each counter
         setTimeout(() => {
           updateCounter();
         }, Math.random() * 200);
       });
     }
-    
+
     // Enhanced Intersection Observer for Statistics
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const statsSection = document.getElementById('stats-section');
       let hasAnimated = false;
-      
+
       const statsObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting && !hasAnimated) {
@@ -1560,17 +1695,17 @@
                 card.style.transform = 'translateY(0)';
               }, index * 150);
             });
-            
+
             // Start counter animation after cards appear
             setTimeout(() => {
               animateCounters();
             }, 600);
-            
+
             statsObserver.unobserve(entry.target);
           }
         });
       }, { threshold: 0.3 });
-      
+
       if (statsSection) {
         // Initially hide stats cards for animation
         const statsCards = document.querySelectorAll('.stats-card');
@@ -1579,13 +1714,13 @@
           card.style.transform = 'translateY(30px)';
           card.style.transition = 'all 0.6s ease';
         });
-        
+
         statsObserver.observe(statsSection);
       }
     });
-        
+
     // Skills Progress Animation with Intersection Observer
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const skillsSections = document.querySelectorAll('#skills, .py-20.px-4.md\\:px-12.bg-gradient-to-br.from-\\[rgb\\(34\\,34\\,41\\)\\].to-\\[rgb\\(25\\,25\\,31\\)\\]');
       skillsSections.forEach(skillsSection => {
         const observer = new IntersectionObserver((entries) => {
@@ -1626,7 +1761,7 @@
 
     // Scroll to top functionality
     const scrollTopBtn = document.getElementById('scrollToTopBtn');
-    
+
     window.addEventListener('scroll', () => {
       if (window.pageYOffset > 300) {
         scrollTopBtn.classList.remove('hidden');
@@ -1657,4 +1792,5 @@
     });
   </script>
 </body>
+
 </html>
