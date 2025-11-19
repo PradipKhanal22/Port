@@ -624,6 +624,9 @@
           <a href="#about" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
             <i class="fas fa-user mr-2"></i>About
           </a>
+          <a href="#projects" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
+            <i class="fas fa-briefcase mr-2"></i>Projects
+          </a>
           <a href="#services" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
             <i class="fas fa-cogs mr-2"></i>Services
           </a>
@@ -649,6 +652,9 @@
           </a>
           <a href="#about" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
             <i class="fas fa-user"></i><span>About</span>
+          </a>
+          <a href="#projects" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+            <i class="fas fa-briefcase"></i><span>Projects</span>
           </a>
           <a href="#services" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
             <i class="fas fa-cogs"></i><span>Services</span>
@@ -723,7 +729,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </a>
-          <a href="contact.html"
+          <a href="#contact"
             class="bg-transparent border-2 border-[#FF4500] px-8 py-4 rounded-xl text-white text-lg font-semibold cursor-pointer hover:bg-[#FF4500] transition-all duration-300 inline-flex items-center group btn-enhanced">
             <span>Hire Me</span>
             <svg class="ml-3 w-5 h-5 transform group-hover:rotate-12 transition-transform" fill="none"
@@ -1080,7 +1086,7 @@
 
       <!-- Call to Action -->
       <div class="text-center mt-12">
-        <a href="contact.html"
+        <a href="#contact"
           class="bg-gradient-to-r from-[#FF4500] to-[#FF6B35] px-8 py-4 rounded-xl text-white text-lg font-semibold cursor-pointer hover:from-[#FF6B35] hover:to-[#FF4500] transition-all duration-300 inline-flex items-center group btn-enhanced shadow-lg hover:shadow-xl">
           <span>Start Your Project</span>
           <svg class="ml-3 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none"
@@ -1205,17 +1211,6 @@
             architecture.
           </p>
         </div>
-      </div>
-
-      <div class="text-center mt-12">
-        <a href="services.html"
-          class="bg-[#FF4500] px-8 py-3 rounded-lg text-white text-lg font-semibold inline-flex items-center hover:bg-orange-700 transition-all duration-300 hover:scale-105 shadow-lg group">
-          <span>View All Services</span>
-          <svg class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
-        </a>
       </div>
     </div>
   </section>
@@ -1386,11 +1381,11 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        <!-- Project Card 1 -->
+        <!-- Project Card 1: RetroKits Nepal -->
         <div
           class="project-card bg-[rgb(40,40,48)] rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF4500]/30 hover:transform hover:scale-105 group">
           <div class="h-48 overflow-hidden relative">
-            <img src="images/s1.png" alt="E-Commerce Website"
+            <img src="images/s1.png" alt="RetroKits Nepal"
               class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1399,12 +1394,6 @@
               class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
               <div class="flex space-x-2">
                 <a href="#" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                  </svg>
-                </a>
-                <a href="#" class="bg-white/20 p-2 rounded-full text-white hover:bg-white/30 transition-colors">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -1417,122 +1406,298 @@
             </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">E-Commerce
-              Website</h3>
-            <p class="text-gray-400 text-sm mb-4 leading-relaxed">A full-featured store built using Laravel and Vue.js
-              with integrated payment support and modern UI.</p>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">RetroKits Nepal</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Ecommerce site for sportswear with complete shopping cart, payment integration, and order management system.</p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
-              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind
-                CSS</span>
-              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">MySQL</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card 2 -->
-        <div
-          class="project-card bg-[rgb(40,40,48)] rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF4500]/30 hover:transform hover:scale-105 group">
-          <div class="h-48 overflow-hidden relative">
-            <img src="images/s2.png" alt="Admin Dashboard"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            </div>
-            <div
-              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-              <div class="flex space-x-2">
-                <a href="#" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                  </svg>
-                </a>
-                <a href="#" class="bg-white/20 p-2 rounded-full text-white hover:bg-white/30 transition-colors">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
-                    </path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">Admin Dashboard
-            </h3>
-            <p class="text-gray-400 text-sm mb-4 leading-relaxed">A powerful backend system for analytics and user
-              management with real-time data visualization.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
-              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind
-                CSS</span>
-              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card 3 -->
-        <div
-          class="project-card bg-[rgb(40,40,48)] rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF4500]/30 hover:transform hover:scale-105 group">
-          <div class="h-48 overflow-hidden relative">
-            <img src="images/s3.png" alt="NutriCare"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            </div>
-            <div
-              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-              <div class="flex space-x-2">
-                <a href="#" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                  </svg>
-                </a>
-                <a href="#" class="bg-white/20 p-2 rounded-full text-white hover:bg-white/30 transition-colors">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
-                    </path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">NutriCare</h3>
-            <p class="text-gray-400 text-sm mb-4 leading-relaxed">A product landing site for premium health supplements
-              with modern design and smooth interactions.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
-              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">MySQL</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">HTML</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
               <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">SQL/SQLite</span>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- View More Projects Button -->
-      <div class="text-center">
-        <a href="#"
-          class="bg-[#FF4500] px-8 py-4 rounded-lg text-white text-lg font-semibold inline-flex items-center hover:bg-orange-700 transition-all duration-300 hover:scale-105 shadow-lg group">
-          <span>View All Projects</span>
-          <svg class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
-        </a>
+        <!-- Project Card 2: Nutricare FishOil -->
+        <div
+          class="project-card bg-[rgb(40,40,48)] rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF4500]/30 hover:transform hover:scale-105 group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/s3.png" alt="Nutricare FishOil"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div
+              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+              <div class="flex space-x-2">
+                <a href="https://nutricareus.com/" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">Nutricare FishOil</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Single product website for premium Australian fish oil supplements with elegant design and seamless user experience.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">HTML</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">SQL/SQLite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3: Chetana -->
+        <div
+          class="project-card bg-[rgb(40,40,48)] rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF4500]/30 hover:transform hover:scale-105 group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/s2.png" alt="Chetana"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div
+              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+              <div class="flex space-x-2">
+                <a href="#" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">Chetana</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Electronics items website featuring comprehensive product catalog with advanced filtering and search functionality.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">HTML</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">SQL/SQLite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 4: Lict -->
+        <div
+          class="project-card bg-[rgb(40,40,48)] rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF4500]/30 hover:transform hover:scale-105 group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/s1.png" alt="Lict"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div
+              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+              <div class="flex space-x-2">
+                <a href="#" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">Lict</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">College site for Lumbini ICT Campus with student portal, course information, and online admission system.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">HTML</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">SQL/SQLite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 5: Opera Educational Consulting -->
+        <div
+          class="project-card bg-[rgb(40,40,48)] rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF4500]/30 hover:transform hover:scale-105 group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/s2.png" alt="Opera Educational Consulting"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div
+              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+              <div class="flex space-x-2">
+                <a href="#" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">Opera Educational Consulting</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Consultancy website for educational services with appointment booking and student counseling management system.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">HTML</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">SQL/SQLite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 6: Smart Hands Cleaning Services -->
+        <div
+          class="project-card bg-[rgb(40,40,48)] rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF4500]/30 hover:transform hover:scale-105 group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/s3.png" alt="Smart Hands Cleaning Services"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div
+              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+              <div class="flex space-x-2">
+                <a href="https://smarthandscleaningservices.com.au/" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">Smart Hands Cleaning Services</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Cleaning services website with online booking system, service packages, and customer scheduling features.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">HTML</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">SQL/SQLite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 7: Open Sky Travels -->
+        <div
+          class="project-card bg-[rgb(40,40,48)] rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF4500]/30 hover:transform hover:scale-105 group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/s1.png" alt="Open Sky Travels"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div
+              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+              <div class="flex space-x-2">
+                <a href="#" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">Open Sky Travels</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Fully functional travel booking website with flight reservations, hotel bookings, and destination-based package tours.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">HTML</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">SQL/SQLite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 8: NBKS INC -->
+        <div
+          class="project-card bg-[rgb(40,40,48)] rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF4500]/30 hover:transform hover:scale-105 group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/s2.png" alt="NBKS INC"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div
+              class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+              <div class="flex space-x-2">
+                <a href="https://nbks.org.au/" class="bg-[#FF4500] p-2 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF4500] transition-colors">NBKS INC</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Nepal Bhajan Kirtan Samuha non-profit community organization website promoting unity, cultural preservation, and well-being.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">HTML</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+              <span class="bg-[#FF4500]/20 text-[#FF4500] px-3 py-1 rounded-full text-xs font-medium">SQL/SQLite</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section class="py-20 px-4 md:px-12 bg-[rgb(40,40,48)]">
+  <section id="testimonials" class="py-20 px-4 md:px-12 bg-[rgb(40,40,48)] overflow-hidden">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-[#FF4500] text-3xl md:text-4xl font-bold mb-4 animate__animated animate__fadeInDown">CLIENT
@@ -1543,75 +1708,253 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div
-          class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 animate__animated animate__fadeInUp">
-          <div class="flex items-center mb-6">
-            <div class="flex text-[#FF4500] text-lg">
-              ★★★★★
+      <div class="relative">
+        <div class="testimonial-slider-wrapper overflow-hidden">
+          <div class="testimonial-slider flex gap-8 transition-transform duration-700 ease-in-out">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-slide flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)]">
+              <div class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 h-full">
+                <div class="flex items-center mb-6">
+                  <div class="flex text-[#FF4500] text-lg">
+                    ★★★★★
+                  </div>
+                </div>
+                <p class="text-gray-300 leading-relaxed mb-6 italic">
+                  "Pradip delivered an exceptional e-commerce website that exceeded our expectations. His attention to detail
+                  and technical expertise made our project a huge success."
+                </p>
+                <div class="flex items-center">
+                  <img src="./images/imgae6.png" alt="Sarah Johnson"
+                    class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
+                  <div>
+                    <h4 class="text-white font-semibold">Sarah Johnson</h4>
+                    <p class="text-gray-400 text-sm">E-commerce Business Owner</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <p class="text-gray-300 leading-relaxed mb-6 italic">
-            "Pradip delivered an exceptional e-commerce website that exceeded our expectations. His attention to detail
-            and technical expertise made our project a huge success."
-          </p>
-          <div class="flex items-center">
-            <img src="./images/imgae6.png" alt="Sarah Johnson"
-              class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
-            <div>
-              <h4 class="text-white font-semibold">Sarah Johnson</h4>
-              <p class="text-gray-400 text-sm">E-commerce Business Owner</p>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-slide flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)]">
+              <div class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 h-full">
+                <div class="flex items-center mb-6">
+                  <div class="flex text-[#FF4500] text-lg">
+                    ★★★★★
+                  </div>
+                </div>
+                <p class="text-gray-300 leading-relaxed mb-6 italic">
+                  "Working with Pradip was a fantastic experience. He understood our requirements perfectly and delivered a
+                  clean, modern website that our users love."
+                </p>
+                <div class="flex items-center">
+                  <img src="./images/imgae5.png" alt="Mike Chen"
+                    class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
+                  <div>
+                    <h4 class="text-white font-semibold">Mike Chen</h4>
+                    <p class="text-gray-400 text-sm">Startup Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-slide flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)]">
+              <div class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 h-full">
+                <div class="flex items-center mb-6">
+                  <div class="flex text-[#FF4500] text-lg">
+                    ★★★★★
+                  </div>
+                </div>
+                <p class="text-gray-300 leading-relaxed mb-6 italic">
+                  "Pradip's expertise in Laravel and modern web technologies helped us build a robust admin dashboard. Highly
+                  recommended for any web development project."
+                </p>
+                <div class="flex items-center">
+                  <img src="./images/image3.png" alt="Amanda Rodriguez"
+                    class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
+                  <div>
+                    <h4 class="text-white font-semibold">Amanda Rodriguez</h4>
+                    <p class="text-gray-400 text-sm">Project Manager</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-slide flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)]">
+              <div class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 h-full">
+                <div class="flex items-center mb-6">
+                  <div class="flex text-[#FF4500] text-lg">
+                    ★★★★★
+                  </div>
+                </div>
+                <p class="text-gray-300 leading-relaxed mb-6 italic">
+                  "Outstanding work! Pradip transformed our outdated website into a modern, responsive platform. His communication throughout the project was excellent."
+                </p>
+                <div class="flex items-center">
+                  <img src="./images/image4.png" alt="David Thompson"
+                    class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
+                  <div>
+                    <h4 class="text-white font-semibold">David Thompson</h4>
+                    <p class="text-gray-400 text-sm">Marketing Director</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-slide flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)]">
+              <div class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 h-full">
+                <div class="flex items-center mb-6">
+                  <div class="flex text-[#FF4500] text-lg">
+                    ★★★★★
+                  </div>
+                </div>
+                <p class="text-gray-300 leading-relaxed mb-6 italic">
+                  "The travel booking system Pradip built for us is incredible! The user interface is intuitive and the backend is rock solid. Couldn't be happier!"
+                </p>
+                <div class="flex items-center">
+                  <img src="./images/image2.png" alt="Lisa Martinez"
+                    class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
+                  <div>
+                    <h4 class="text-white font-semibold">Lisa Martinez</h4>
+                    <p class="text-gray-400 text-sm">Travel Agency CEO</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-slide flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)]">
+              <div class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 h-full">
+                <div class="flex items-center mb-6">
+                  <div class="flex text-[#FF4500] text-lg">
+                    ★★★★★
+                  </div>
+                </div>
+                <p class="text-gray-300 leading-relaxed mb-6 italic">
+                  "Professional, efficient, and creative! Pradip brought our vision to life and delivered ahead of schedule. His problem-solving skills are exceptional."
+                </p>
+                <div class="flex items-center">
+                  <img src="./images/image1.png" alt="James Wilson"
+                    class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
+                  <div>
+                    <h4 class="text-white font-semibold">James Wilson</h4>
+                    <p class="text-gray-400 text-sm">Tech Startup Co-founder</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
-        <div
-          class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-1s">
-          <div class="flex items-center mb-6">
-            <div class="flex text-[#FF4500] text-lg">
-              ★★★★★
-            </div>
-          </div>
-          <p class="text-gray-300 leading-relaxed mb-6 italic">
-            "Working with Pradip was a fantastic experience. He understood our requirements perfectly and delivered a
-            clean, modern website that our users love."
-          </p>
-          <div class="flex items-center">
-            <img src="./images/imgae5.png" alt="Sarah Johnson"
-              class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
-            <div>
-              <h4 class="text-white font-semibold">Mike Chen</h4>
-              <p class="text-gray-400 text-sm">Startup Founder</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div
-          class="bg-[rgb(34,34,41)] p-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-[#FF4500]/20 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-2s">
-          <div class="flex items-center mb-6">
-            <div class="flex text-[#FF4500] text-lg">
-              ★★★★★
-            </div>
-          </div>
-          <p class="text-gray-300 leading-relaxed mb-6 italic">
-            "Pradip's expertise in Laravel and modern web technologies helped us build a robust admin dashboard. Highly
-            recommended for any web development project."
-          </p>
-          <div class="flex items-center">
-            <img src="./images/image3.png" alt="Sarah Johnson"
-              class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-[#FF4500]" />
-            <div>
-              <h4 class="text-white font-semibold">Amanda Rodriguez</h4>
-              <p class="text-gray-400 text-sm">Project Manager</p>
-            </div>
-          </div>
+        <!-- Slider Dots -->
+        <div class="flex justify-center gap-2 mt-8">
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-[#FF4500] transition-all duration-300" data-index="0"></button>
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-600 transition-all duration-300" data-index="1"></button>
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-600 transition-all duration-300" data-index="2"></button>
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-600 transition-all duration-300" data-index="3"></button>
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-600 transition-all duration-300" data-index="4"></button>
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-600 transition-all duration-300" data-index="5"></button>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    // Testimonials Slider
+    const testimonialSlider = document.querySelector('.testimonial-slider');
+    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+    const testimonialDots = document.querySelectorAll('.testimonial-dot');
+    let currentTestimonialIndex = 0;
+    let testimonialInterval;
+
+    function getVisibleSlides() {
+      if (window.innerWidth >= 1024) return 3; // lg
+      if (window.innerWidth >= 768) return 2;  // md
+      return 1; // mobile
+    }
+
+    function updateTestimonialSlider(index, smooth = true) {
+      const visibleSlides = getVisibleSlides();
+      const maxIndex = testimonialSlides.length - visibleSlides;
+      
+      if (index > maxIndex) {
+        // Reset to beginning
+        currentTestimonialIndex = 0;
+        testimonialSlider.style.transition = 'none';
+        const slideWidth = testimonialSlides[0].offsetWidth + 32; // 32px gap
+        testimonialSlider.style.transform = `translateX(0px)`;
+        
+        setTimeout(() => {
+          testimonialSlider.style.transition = 'transform 700ms ease-in-out';
+          currentTestimonialIndex = 1;
+          testimonialSlider.style.transform = `translateX(-${slideWidth}px)`;
+          updateDots(1);
+        }, 50);
+        return;
+      }
+      
+      currentTestimonialIndex = index;
+      const slideWidth = testimonialSlides[0].offsetWidth + 32;
+      
+      if (!smooth) {
+        testimonialSlider.style.transition = 'none';
+      } else {
+        testimonialSlider.style.transition = 'transform 700ms ease-in-out';
+      }
+      
+      testimonialSlider.style.transform = `translateX(-${currentTestimonialIndex * slideWidth}px)`;
+      updateDots(currentTestimonialIndex);
+    }
+
+    function updateDots(index) {
+      testimonialDots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.remove('bg-gray-600');
+          dot.classList.add('bg-[#FF4500]');
+        } else {
+          dot.classList.remove('bg-[#FF4500]');
+          dot.classList.add('bg-gray-600');
+        }
+      });
+    }
+
+    function startTestimonialAutoSlide() {
+      testimonialInterval = setInterval(() => {
+        updateTestimonialSlider(currentTestimonialIndex + 1);
+      }, 4000);
+    }
+
+    function stopTestimonialAutoSlide() {
+      clearInterval(testimonialInterval);
+    }
+
+    // Dot navigation
+    testimonialDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        stopTestimonialAutoSlide();
+        updateTestimonialSlider(index);
+        startTestimonialAutoSlide();
+      });
+    });
+
+    // Pause on hover
+    testimonialSlider.addEventListener('mouseenter', stopTestimonialAutoSlide);
+    testimonialSlider.addEventListener('mouseleave', startTestimonialAutoSlide);
+
+    // Handle window resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        updateTestimonialSlider(currentTestimonialIndex, false);
+      }, 100);
+    });
+
+    // Start auto-slide
+    startTestimonialAutoSlide();
+  </script>
 
   <!-- Services Section -->
   <section id="services"
@@ -2143,89 +2486,10 @@
 
   <!-- Scroll to Top -->
   <!-- Professional Footer -->
-  <footer class="professional-footer py-16 px-6">
+  <footer class="professional-footer py-8 px-6 bg-[rgb(25,25,31)] border-t border-gray-700/50">
     <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <!-- Brand Section -->
-        <div class="footer-section fade-in-up">
-          <h3 class="text-2xl font-bold font-display professional-gradient-text mb-4">
-            <i class="fas fa-code mr-2"></i>Pradip Khanal
-          </h3>
-          <p class="text-gray-400 mb-4 leading-relaxed">
-            Passionate developer creating innovative solutions with modern technologies.
-            Let's build something amazing together.
-          </p>
-          <div class="flex space-x-4 text-white">
-            <a href="https://github.com/PradipKhanal22" class="social-link" aria-label="GitHub">
-              <i class="fab fa-github text-lg"></i>
-            </a>
-            <a href="https://linkedin.com/in/pradip-khanal-92a97333a" class="social-link" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in text-lg"></i>
-            </a>
-            <a href="https://facebook.com/pradip.khanal.7528" class="social-link" aria-label="Facebook">
-              <i class="fab fa-facebook-f text-lg"></i>
-            </a>
-            <a href="https://instagram.com/pradipkhanal_25" class="social-link" aria-label="Instagram">
-              <i class="fab fa-instagram text-lg"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="footer-section fade-in-up" style="animation-delay: 0.2s;">
-          <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Quick Links</h4>
-          <a href="#home" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-            <i class="fas fa-home mr-2"></i>Home
-          </a>
-          <a href="#about" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-            <i class="fas fa-user mr-2"></i>About
-          </a>
-          <a href="#services" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-            <i class="fas fa-cogs mr-2"></i>Services
-          </a>
-          <a href="#resume" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-            <i class="fas fa-file-alt mr-2"></i>Resume
-          </a>
-        </div>
-
-        <!-- Services -->
-        <div class="footer-section fade-in-up" style="animation-delay: 0.4s;">
-          <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Services</h4>
-          <a href="#services" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-            <i class="fas fa-laptop-code mr-2"></i>Web Development
-          </a>
-          <a href="#services" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-            <i class="fas fa-mobile-alt mr-2"></i>Mobile Apps
-          </a>
-          <a href="#services" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-            <i class="fas fa-paint-brush mr-2"></i>UI/UX Design
-          </a>
-          <a href="#services" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
-            <i class="fas fa-search mr-2"></i>SEO Optimization
-          </a>
-        </div>
-
-        <!-- Contact Info -->
-        <div class="footer-section fade-in-up" style="animation-delay: 0.6s;">
-          <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Get In Touch</h4>
-          <div class="text-gray-400 mb-2">
-            <i class="fas fa-envelope mr-2"></i>
-            <a href="mailto:khanalpradip74@gmail.com" class="hover:text-[#FF4500]">khanalpradip74@gmail.com</a>
-          </div>
-          <div class="text-gray-400 mb-2">
-            <i class="fas fa-phone mr-2"></i>
-            <a href="tel:9804453481" class="hover:text-[#FF4500]">+977 9804453581</a>
-          </div>
-          <div class="text-gray-400 mb-2">
-            <i class="fas fa-map-marker-alt mr-2"></i>
-            <span>Kawasoti-9, Nawalpur, Nepal</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Bar -->
-      <div class="border-t border-gray-700 mt-12 pt-8 text-center fade-in-up" style="animation-delay: 0.8s;">
-        <p class="text-gray-400">
+      <div class="text-center">
+        <p class="text-gray-400 text-sm">
           © 2025 Pradip Khanal. All rights reserved.
         </p>
       </div>
