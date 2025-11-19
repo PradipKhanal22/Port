@@ -369,8 +369,155 @@
     }
 
     /* Service Cards Enhancement */
+    .service-card {
+      background: linear-gradient(145deg, var(--card-bg) 0%, #334155 100%);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(20px);
+      transition: all 0.4s ease;
+    }
+
     .service-card:hover {
       box-shadow: 0 20px 40px rgba(255, 69, 0, 0.2);
+      transform: translateY(-8px);
+      border-color: var(--secondary-color);
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent, rgba(234, 88, 12, 0.05), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      border-radius: inherit;
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Contact Form Styles */
+    .professional-form {
+      background: linear-gradient(145deg, var(--card-bg) 0%, #334155 100%);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .professional-form::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+      background-size: 200% 100%;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    .professional-input {
+      background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      border: 2px solid var(--border-color);
+      color: var(--text-primary);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .professional-input:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+      background: #1e293b;
+      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1), 0 10px 25px rgba(249, 115, 22, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .professional-input::placeholder {
+      color: #64748b;
+      font-weight: 400;
+    }
+
+    .professional-btn {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+      border: none;
+      color: white;
+      font-weight: 600;
+      transition: all 0.4s ease;
+    }
+
+    .professional-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(234, 88, 12, 0.4);
+    }
+
+    .contact-info-card {
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-info-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-info-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent, rgba(249, 115, 22, 0.05), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .contact-info-card:hover::after {
+      opacity: 1;
+    }
+
+    .loading-dots::after {
+      content: '';
+      animation: loading-dots 1.5s infinite;
+    }
+
+    @keyframes loading-dots {
+
+      0%,
+      20% {
+        content: '';
+      }
+
+      40% {
+        content: '.';
+      }
+
+      60% {
+        content: '..';
+      }
+
+      80%,
+      100% {
+        content: '...';
+      }
+    }
+
+    /* Resume Cards */
+    .resume-card {
+      background: linear-gradient(145deg, var(--card-bg) 0%, #334155 100%);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(20px);
+      transition: all 0.4s ease;
+    }
+
+    .resume-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-color: var(--secondary-color);
     }
 
     /* Smooth scrolling enhancement */
@@ -471,19 +618,19 @@
 
         <!-- Professional Navigation Links -->
         <div class="hidden lg:flex items-center space-x-8">
-          <a href="index.html" class="nav-link active px-4 py-2 rounded-lg transition-all duration-300">
+          <a href="#home" class="nav-link active px-4 py-2 rounded-lg transition-all duration-300">
             <i class="fas fa-home mr-2"></i>Home
           </a>
-          <a href="about.html" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
+          <a href="#about" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
             <i class="fas fa-user mr-2"></i>About
           </a>
-          <a href="services.html" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
+          <a href="#services" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
             <i class="fas fa-cogs mr-2"></i>Services
           </a>
-          <a href="resume.html" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
+          <a href="#resume" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
             <i class="fas fa-file-alt mr-2"></i>Resume
           </a>
-          <a href="contact.html" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
+          <a href="#contact" class="nav-link px-4 py-2 rounded-lg transition-all duration-300">
             <i class="fas fa-envelope mr-2"></i>Contact
           </a>
         </div>
@@ -497,19 +644,19 @@
       <!-- Mobile Menu -->
       <div id="mobileMenu" class="lg:hidden hidden absolute top-full left-0 right-0 professional-card m-4 rounded-2xl">
         <div class="p-6 space-y-4">
-          <a href="index.html" class="nav-link active flex items-center space-x-3 p-3 rounded-lg">
+          <a href="#home" class="nav-link active flex items-center space-x-3 p-3 rounded-lg">
             <i class="fas fa-home"></i><span>Home</span>
           </a>
-          <a href="about.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+          <a href="#about" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
             <i class="fas fa-user"></i><span>About</span>
           </a>
-          <a href="services.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+          <a href="#services" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
             <i class="fas fa-cogs"></i><span>Services</span>
           </a>
-          <a href="resume.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+          <a href="#resume" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
             <i class="fas fa-file-alt"></i><span>Resume</span>
           </a>
-          <a href="contact.html" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
+          <a href="#contact" class="nav-link flex items-center space-x-3 p-3 rounded-lg">
             <i class="fas fa-envelope"></i><span>Contact</span>
           </a>
         </div>
@@ -1466,6 +1613,533 @@
     </div>
   </section>
 
+  <!-- Services Section -->
+  <section id="services"
+    class="min-h-screen py-20 px-4 md:px-12 pt-32 bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(25,25,31)] relative overflow-hidden">
+    <!-- Background Decorations -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-20 w-32 h-32 border-2 border-[#ea580c] rounded-full animate-pulse"></div>
+      <div class="absolute bottom-32 right-32 w-24 h-24 border border-[#ea580c] rounded-full floating"></div>
+      <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-[#ea580c] rounded-full opacity-30 floating"
+        style="animation-delay: -1s;"></div>
+      <div class="absolute top-1/3 right-1/3 w-20 h-20 border border-[#ea580c] rounded-full opacity-20 floating"
+        style="animation-delay: -2s;"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+          My <span class="gradient-text">Services</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-[#ea580c] to-[#f97316] mx-auto mb-6"></div>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
+          I offer a comprehensive range of professional services to help businesses establish and grow their online
+          presence with modern, scalable solutions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <!-- Service 1 -->
+        <div class="service-card professional-card p-8 rounded-xl fade-in-up group">
+          <div
+            class="bg-gradient-to-br from-[#ea580c] to-[#f97316] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-white group-hover:text-[#ea580c] transition-colors">Web Development
+          </h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Custom website development tailored to your business needs using modern technologies like Laravel, PHP, and
+            JavaScript for optimal performance.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card professional-card p-8 rounded-xl fade-in-up group">
+          <div
+            class="bg-gradient-to-br from-[#ea580c] to-[#f97316] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-white group-hover:text-[#ea580c] transition-colors">UI/UX Design</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Creating intuitive and beautiful user interfaces that enhance user experience, drive engagement, and convert
+            visitors into customers.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Figma</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Adobe XD</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Sketch</span>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card professional-card p-8 rounded-xl fade-in-up group">
+          <div
+            class="bg-gradient-to-br from-[#ea580c] to-[#f97316] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-white group-hover:text-[#ea580c] transition-colors">Frontend
+            Development</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Building responsive, interactive front-end applications with modern frameworks for seamless user experiences
+            across all devices.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">HTML/CSS</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Tailwind</span>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card professional-card p-8 rounded-xl fade-in-up group">
+          <div
+            class="bg-gradient-to-br from-[#ea580c] to-[#f97316] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-white group-hover:text-[#ea580c] transition-colors">Backend Development
+          </h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Robust server-side development with PHP, Laravel, and secure databases to power your applications with
+            scalable architecture.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card professional-card p-8 rounded-xl fade-in-up group">
+          <div
+            class="bg-gradient-to-br from-[#ea580c] to-[#f97316] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-white group-hover:text-[#ea580c] transition-colors">E-Commerce
+            Solutions</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Complete e-commerce platforms with secure payment integration, inventory management, and user-friendly
+            shopping experiences.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Stripe</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">PayPal</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">WooCommerce</span>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card professional-card p-8 rounded-xl fade-in-up group">
+          <div
+            class="bg-gradient-to-br from-[#ea580c] to-[#f97316] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-white group-hover:text-[#ea580c] transition-colors">Website
+            Optimization</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Performance optimization, SEO implementation, and speed improvements to ensure your website ranks well and
+            loads fast.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">SEO</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Performance</span>
+            <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume"
+    class="min-h-screen py-20 px-4 md:px-12 pt-32 bg-[rgb(40,40,48)] relative overflow-hidden">
+    <!-- Background Decorations -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-20 w-32 h-32 border-2 border-[#ea580c] rounded-full animate-pulse"></div>
+      <div class="absolute bottom-32 right-32 w-24 h-24 border border-[#ea580c] rounded-full floating"></div>
+      <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-[#ea580c] rounded-full opacity-30 floating"
+        style="animation-delay: -1s;"></div>
+      <div class="absolute top-1/3 right-1/3 w-20 h-20 border border-[#ea580c] rounded-full opacity-20 floating"
+        style="animation-delay: -2s;"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+      <!-- Header -->
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+          My <span class="gradient-text">Resume</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-[#ea580c] to-[#f97316] mx-auto mb-6"></div>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
+          A comprehensive overview of my educational background, professional experience, and technical expertise in web
+          development and software engineering.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <!-- Education -->
+        <div class="fade-in-up">
+          <h3 class="text-2xl md:text-3xl font-bold mb-8 flex items-center text-white">
+            <div class="bg-gradient-to-r from-[#ea580c] to-[#f97316] p-3 rounded-xl mr-4">
+              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            Education
+          </h3>
+          <div class="relative pl-12 timeline">
+            <div class="relative mb-8 timeline-item resume-card professional-card p-6 rounded-xl fade-in-up">
+              <div
+                class="absolute -top-2 -left-2 bg-gradient-to-r from-[#ea580c] to-[#f97316] text-white px-3 py-1 rounded-full text-sm font-bold">
+                Current
+              </div>
+              <span class="text-[#ea580c] font-semibold text-lg">2021 - Present</span>
+              <h4 class="text-xl font-bold mt-2 mb-2 text-white">Bachelor in Information Management</h4>
+              <p class="text-[#ea580c] font-semibold mb-3">Tribhuvan University, Nepal</p>
+              <p class="text-gray-300 leading-relaxed">
+                Comprehensive study in information systems, web technologies, and software engineering.
+                Specialized coursework in Data Structures, Algorithms, Database Management Systems,
+                and Modern Web Development frameworks.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Data
+                  Structures</span>
+                <span
+                  class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Algorithms</span>
+                <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">DBMS</span>
+                <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Web Tech</span>
+              </div>
+            </div>
+            <div class="relative mb-8 timeline-item resume-card professional-card p-6 rounded-xl fade-in-up">
+              <span class="text-[#ea580c] font-semibold text-lg">2018 - 2020</span>
+              <h4 class="text-xl font-bold mt-2 mb-2 text-white">Higher Secondary Education</h4>
+              <p class="text-[#ea580c] font-semibold mb-3">National Examination Board, Nepal</p>
+              <p class="text-gray-300 leading-relaxed">
+                Completed +2 in Science with Computer Science as a major subject.
+                Achieved distinction with a strong foundation in mathematics, physics, and computer programming.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span
+                  class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Mathematics</span>
+                <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Computer
+                  Science</span>
+                <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Physics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="fade-in-up">
+          <h3 class="text-2xl md:text-3xl font-bold mb-8 flex items-center text-white">
+            <div class="bg-gradient-to-r from-[#ea580c] to-[#f97316] p-3 rounded-xl mr-4">
+              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 00-2 2H10a2 2 0 00-2-2V6m8 0h2a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2" />
+              </svg>
+            </div>
+            Experience
+          </h3>
+          <div class="relative pl-12 timeline">
+            <div class="relative mb-8 timeline-item resume-card professional-card p-6 rounded-xl fade-in-up">
+              <div
+                class="absolute -top-2 -left-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                Recent
+              </div>
+              <span class="text-[#ea580c] font-semibold text-lg">Jan 2025 - Present</span>
+              <h4 class="text-xl font-bold mt-2 mb-2 text-white">Web Development Intern</h4>
+              <p class="text-[#ea580c] font-semibold mb-3">Bitmap I.T. Solution Pvt. Ltd.</p>
+              <p class="text-gray-300 leading-relaxed mb-4">
+                Actively contributing to web development projects, creating responsive client websites,
+                developing reusable UI components, and participating in project deployments.
+                Gained hands-on experience with modern development workflows and client communication.
+              </p>
+              <div class="bg-[rgb(30,30,37)] p-4 rounded-lg mb-4">
+                <h5 class="text-white font-semibold mb-2">Key Achievements:</h5>
+                <ul class="text-gray-300 text-sm space-y-1">
+                  <li>• Created 10+ responsive client websites</li>
+                  <li>• Developed reusable UI component library</li>
+                  <li>• Participated in 5+ successful project deployments</li>
+                  <li>• Collaborated with cross-functional teams</li>
+                </ul>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+                <span
+                  class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+                <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">CSS/HTML</span>
+                <span class="bg-[#ea580c]/20 text-[#ea580c] px-3 py-1 rounded-full text-xs font-medium">Team
+                  Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Download CV Button -->
+      <div class="text-center fade-in-up">
+        <a href="Pradip_Khanal_CV%20(1).pdf" download="Pradip_Khanal_Resume.pdf"
+          class="professional-btn px-8 py-4 rounded-xl text-white text-lg font-semibold inline-flex items-center transition-all duration-300 btn-enhanced">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+            </path>
+          </svg>
+          <span>Download Full Resume</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact"
+    class="pt-32 pb-20 px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-[rgb(34,34,41)] to-[rgb(25,25,31)]">
+    <!-- Background Decorations -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-20 w-32 h-32 border-2 border-[#ea580c] rounded-full animate-pulse"></div>
+      <div class="absolute bottom-32 right-32 w-24 h-24 border border-[#ea580c] rounded-full floating"></div>
+      <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-[#ea580c] rounded-full opacity-30 floating"
+        style="animation-delay: -1s;"></div>
+      <div class="absolute top-1/3 right-1/3 w-20 h-20 border border-[#ea580c] rounded-full opacity-20 floating"
+        style="animation-delay: -2s;"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <!-- Professional Header -->
+      <div class="text-center mb-20 fade-in-up">
+        <h1 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
+          Get In <span class="gradient-text">Touch</span>
+        </h1>
+        <div class="w-24 h-1 bg-gradient-to-r from-[#ea580c] to-[#f97316] mx-auto mb-6"></div>
+        <p class="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
+          Ready to transform your ideas into exceptional digital solutions? Let's connect and discuss your
+          project.
+        </p>
+      </div>
+
+      <!-- Professional Contact Section -->
+      <div class="grid grid-cols-1 xl:grid-cols-3 gap-12 lg:gap-16">
+        <!-- Professional Contact Form -->
+        <div class="xl:col-span-2 fade-in-up" style="animation-delay: 0.2s;">
+          <div class="professional-form p-8 lg:p-12 rounded-3xl border border-[#ea580c]/20">
+            <div class="mb-10">
+              <h2 class="text-3xl lg:text-4xl font-bold font-display mb-4 text-white">
+                Send Me a Message
+              </h2>
+              <div class="w-20 h-1 bg-gradient-to-r from-[#ea580c] to-[#f97316] rounded-full"></div>
+              <p class="text-gray-400 mt-4 text-lg">
+                I'd love to hear about your project. Fill out the form below, and I'll get back to you
+                within 24 hours.
+              </p>
+            </div>
+
+            <form action="https://formspree.io/f/mjkakwll" method="POST" id="contactForm" class="space-y-8">
+              <!-- Hidden field to specify recipient email -->
+              <input type="hidden" name="_replyto" value="khanalpradip74@gmail.com">
+              <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
+
+              <!-- Name and Email Row -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="fade-in-up" style="animation-delay: 0.4s;">
+                  <label class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
+                    <i class="fas fa-user mr-2 text-[#ea580c]"></i>Full Name
+                  </label>
+                  <input type="text" id="name" name="name" placeholder="Enter your full name" required
+                    class="professional-input w-full px-6 py-4 rounded-2xl text-white placeholder-gray-400 text-lg">
+                </div>
+                <div class="fade-in-up" style="animation-delay: 0.5s;">
+                  <label class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
+                    <i class="fas fa-envelope mr-2 text-[#ea580c]"></i>Email Address
+                  </label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email address" required
+                    class="professional-input w-full px-6 py-4 rounded-2xl text-white placeholder-gray-400 text-lg">
+                </div>
+              </div>
+
+              <!-- Subject -->
+              <div class="fade-in-up" style="animation-delay: 0.6s;">
+                <label class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
+                  <i class="fas fa-tag mr-2 text-[#ea580c]"></i>Subject
+                </label>
+                <input type="text" id="subject" name="subject" placeholder="What would you like to discuss?" required
+                  class="professional-input w-full px-6 py-4 rounded-2xl text-white placeholder-gray-400 text-lg">
+              </div>
+
+              <!-- Message -->
+              <div class="fade-in-up" style="animation-delay: 0.7s;">
+                <label class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
+                  <i class="fas fa-comment-alt mr-2 text-[#ea580c]"></i>Message
+                </label>
+                <textarea id="message" name="message"
+                  placeholder="Tell me about your project, goals, and how I can help you achieve them..." rows="6"
+                  required
+                  class="professional-input w-full px-6 py-4 rounded-2xl text-white placeholder-gray-400 resize-none text-lg leading-relaxed"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="fade-in-up" style="animation-delay: 0.8s;">
+                <button type="submit" id="submitBtn"
+                  class="professional-btn btn-enhanced w-full px-10 py-5 rounded-2xl font-bold text-lg">
+                  <span id="buttonText" class="flex items-center justify-center">
+                    <i class="fas fa-paper-plane mr-3"></i>Send Message
+                  </span>
+                  <span id="loadingText" class="hidden flex items-center justify-center">
+                    <i class="fas fa-spinner fa-spin mr-3"></i>Sending<span class="loading-dots"></span>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Professional Contact Information -->
+        <div class="fade-in-up" style="animation-delay: 0.3s;">
+          <div class="space-y-8">
+            <!-- Professional Info Header -->
+            <div class="text-center lg:text-left">
+              <h2 class="text-3xl lg:text-4xl font-bold font-display mb-4 text-white">
+                Contact Information
+              </h2>
+              <div class="w-20 h-1 bg-gradient-to-r from-[#ea580c] to-[#f97316] rounded-full mx-auto lg:mx-0">
+              </div>
+              <p class="text-gray-400 mt-4 text-lg">
+                Multiple ways to reach me. Choose what works best for you.
+              </p>
+            </div>
+
+            <!-- Professional Contact Cards -->
+            <div class="space-y-6">
+              <!-- Phone Card -->
+              <div class="contact-info-card professional-card p-6 lg:p-8 rounded-3xl fade-in-up"
+                style="animation-delay: 0.4s;">
+                <div class="flex items-start space-x-6">
+                  <div class="professional-icon p-4 rounded-2xl flex-shrink-0">
+                    <i class="fas fa-phone text-2xl"></i>
+                  </div>
+                  <div class="flex-grow">
+                    <h3 class="font-bold text-xl text-white mb-2 font-display">Phone Number</h3>
+                    <div class="space-y-2">
+                      <div class="flex items-center space-x-3">
+                        <span class="text-[#ea580c]">📱</span>
+                        <a href="tel:+9779804453581"
+                          class="text-gray-400 text-lg hover:text-[#FF4500] transition-colors">+977 9804453581</a>
+                      </div>
+                    </div>
+                    <div class="mt-4 flex items-center space-x-2">
+                      <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                      <span class="text-sm text-green-400 font-medium">Available 9 AM - 9 PM
+                        (NPT)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email Card -->
+              <div class="contact-info-card professional-card p-6 lg:p-8 rounded-3xl fade-in-up"
+                style="animation-delay: 0.5s;">
+                <div class="flex items-start space-x-6">
+                  <div class="professional-icon p-4 rounded-2xl flex-shrink-0">
+                    <i class="fas fa-envelope text-2xl"></i>
+                  </div>
+                  <div class="flex-grow">
+                    <h3 class="font-bold text-xl text-white mb-2 font-display">Email Address</h3>
+                    <div class="space-y-2">
+                      <div class="flex items-center space-x-3">
+                        <a href="mailto:khanalpradip74@gmail.com"
+                          class="text-gray-400 text-lg hover:text-[#FF4500]">khanalpradip74@gmail.com</a>
+                      </div>
+                    </div>
+                    <div class="mt-4 flex items-center space-x-2">
+                      <span class="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
+                      <span class="text-sm text-orange-400 font-medium">Response within 24
+                        hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Location Card -->
+              <div class="contact-info-card professional-card p-6 lg:p-8 rounded-3xl fade-in-up"
+                style="animation-delay: 0.6s;">
+                <div class="flex items-start space-x-6">
+                  <div class="professional-icon p-4 rounded-2xl flex-shrink-0">
+                    <i class="fas fa-map-marker-alt text-2xl"></i>
+                  </div>
+                  <div class="flex-grow">
+                    <h3 class="font-bold text-xl text-white mb-2 font-display">Location</h3>
+                    <div class="space-y-2">
+                      <div class="flex items-center space-x-3">
+                        <span class="text-gray-400 text-lg">Kawasoti-9, Nawalpur, Nepal</span>
+                      </div>
+                    </div>
+                    <div class="mt-4 flex items-center space-x-2">
+                      <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                      <span class="text-sm text-green-400 font-medium">Remote work available
+                        worldwide</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Social Media Section -->
+            <div class="fade-in-up" style="animation-delay: 0.7s;">
+              <h3 class="font-bold text-2xl text-white mb-6 font-display text-center lg:text-left">
+                Connect With Me
+              </h3>
+              <div class="flex space-x-4 justify-center lg:justify-start text-white">
+                <a href="https://facebook.com/pradip.khanal.7528" target="_blank" class="social-link"
+                  aria-label="Facebook">
+                  <i class="fab fa-facebook-f text-lg text-white"></i>
+                </a>
+                <a href="https://instagram.com/pradipkhanal_25" target="_blank" class="social-link"
+                  aria-label="Instagram">
+                  <i class="fab fa-instagram text-lg "></i>
+                </a>
+                <a href="https://linkedin.com/in/pradip-khanal-92a97333a" target="_blank" class="social-link"
+                  aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in text-lg"></i>
+                </a>
+                <a href="https://github.com/PradipKhanal22" target="_blank" class="social-link" aria-label="GitHub">
+                  <i class="fab fa-github text-lg"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Scroll to Top -->
   <!-- Professional Footer -->
@@ -1500,16 +2174,16 @@
         <!-- Quick Links -->
         <div class="footer-section fade-in-up" style="animation-delay: 0.2s;">
           <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Quick Links</h4>
-          <a href="index.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+          <a href="#home" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
             <i class="fas fa-home mr-2"></i>Home
           </a>
-          <a href="about.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+          <a href="#about" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
             <i class="fas fa-user mr-2"></i>About
           </a>
-          <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+          <a href="#services" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
             <i class="fas fa-cogs mr-2"></i>Services
           </a>
-          <a href="resume.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+          <a href="#resume" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
             <i class="fas fa-file-alt mr-2"></i>Resume
           </a>
         </div>
@@ -1517,16 +2191,16 @@
         <!-- Services -->
         <div class="footer-section fade-in-up" style="animation-delay: 0.4s;">
           <h4 class="text-lg font-semibold text-[#ea580c] mb-4">Services</h4>
-          <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+          <a href="#services" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
             <i class="fas fa-laptop-code mr-2"></i>Web Development
           </a>
-          <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+          <a href="#services" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
             <i class="fas fa-mobile-alt mr-2"></i>Mobile Apps
           </a>
-          <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+          <a href="#services" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
             <i class="fas fa-paint-brush mr-2"></i>UI/UX Design
           </a>
-          <a href="services.html" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
+          <a href="#services" class="text-gray-400 hover:text-[#ea580c] transition-colors block mb-2">
             <i class="fas fa-search mr-2"></i>SEO Optimization
           </a>
         </div>
@@ -1787,6 +2461,132 @@
             behavior: 'smooth',
             block: 'start'
           });
+        }
+      });
+    });
+
+    // Contact Form Handling
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const buttonText = document.getElementById('buttonText');
+    const loadingText = document.getElementById('loadingText');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Show loading state
+        buttonText.classList.add('hidden');
+        loadingText.classList.remove('hidden');
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+        const formData = new FormData(contactForm);
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: contactForm.method,
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            showNotification('Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
+            contactForm.reset();
+          } else {
+            showNotification('Oops! Something went wrong. Please try again later.', 'error');
+          }
+        } catch (error) {
+          showNotification('Oops! Something went wrong. Please try again.', 'error');
+        } finally {
+          buttonText.classList.remove('hidden');
+          loadingText.classList.add('hidden');
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+        }
+      });
+    }
+
+    // Notification System
+    function showNotification(message, type = 'info') {
+      const notification = document.createElement('div');
+      notification.className = `fixed top-6 right-6 z-50 p-6 rounded-2xl shadow-2xl transition-all duration-500 transform translate-x-full max-w-md ${type === 'success' ? 'bg-gradient-to-r from-green-600 to-green-700 text-white' :
+          type === 'error' ? 'bg-gradient-to-r from-red-600 to-red-700 text-white' :
+            'bg-gradient-to-r from-blue-600 to-blue-700 text-white'
+        }`;
+
+      notification.innerHTML = `
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 mt-1">
+                        ${type === 'success' ? '<i class="fas fa-check-circle text-2xl"></i>' :
+          type === 'error' ? '<i class="fas fa-exclamation-circle text-2xl"></i>' :
+            '<i class="fas fa-info-circle text-2xl"></i>'
+        }
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-semibold text-lg mb-1">${type === 'success' ? 'Success!' : type === 'error' ? 'Error!' : 'Info'}</p>
+                        <p class="text-sm opacity-90">${message}</p>
+                    </div>
+                    <button onclick="this.closest('[class*=\\"fixed\\"]').remove()" class="flex-shrink-0 ml-4 text-white hover:text-gray-200 transition-colors">
+                        <i class="fas fa-times text-lg"></i>
+                    </button>
+                </div>
+            `;
+
+      document.body.appendChild(notification);
+
+      // Animate in
+      setTimeout(() => {
+        notification.classList.remove('translate-x-full');
+        notification.classList.add('shadow-2xl');
+      }, 100);
+
+      // Auto remove after 6 seconds
+      setTimeout(() => {
+        notification.classList.add('translate-x-full');
+        setTimeout(() => {
+          if (notification.parentElement) {
+            notification.remove();
+          }
+        }, 500);
+      }, 6000);
+    }
+
+    // Input Focus Effects for Contact Form
+    document.querySelectorAll('.professional-input').forEach(input => {
+      input.addEventListener('focus', () => {
+        input.parentElement.classList.add('focused');
+      });
+
+      input.addEventListener('blur', () => {
+        if (!input.value.trim()) {
+          input.parentElement.classList.remove('focused');
+        }
+      });
+
+      if (input.value.trim()) {
+        input.parentElement.classList.add('focused');
+      }
+    });
+
+    // Update active nav link on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
         }
       });
     });
