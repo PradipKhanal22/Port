@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Rounded Favicon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+        canvas {
+            border: 2px solid #FF4500;
+            border-radius: 8px;
+            margin: 20px;
+            display: none;
+        }
+        button {
+            background: #FF4500;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: #FF6B35;
+        }
+        .preview {
+            margin: 20px 0;
+            padding: 20px;
+            background: #2a2a2a;
+            border-radius: 8px;
+        }
+        .preview img {
+            border-radius: 50%;
+            border: 2px solid #FF4500;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 15px;
+            background: #2a2a2a;
+            border-radius: 8px;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Rounded Favicon Generator</h1>
+        <p>This will create perfectly rounded favicons from your me.jpeg image</p>
+        
+        <button onclick="generateAll()">Generate All Rounded Favicons</button>
+        
+        <div class="preview" id="preview"></div>
+        
+        <canvas id="canvas"></canvas>
+        
+        <div id="status">Click the button to generate rounded favicons...</div>
+    </div>
+
+    <script>
+        let generatedCount = 0;
+        const sizes = [
+            { size: 16, name: 'favicon-16x16.png' },
+            { size: 32, name: 'favicon-32x32.png' },
+            { size: 180, name: 'apple-touch-icon.png' },
+            { size: 192, name: 'android-chrome-192x192.png' },
+            { size: 512, name: 'android-chrome-512x512.png' }
+        ];
+
+        function generateAll() {
+            generatedCount = 0;
+            document.getElementById('status').innerHTML = 'Loading image...';
+            document.getElementById('preview').innerHTML = '';
+            
+            const img = new Image();
+            
+            img.onload = function() {
+                document.getElementById('status').innerHTML = 'Generating rounded favicons...<br><br>';
+                
+                sizes.forEach((item, index) => {
+                    setTimeout(() => {
+                        generateRoundedFavicon(img, item.size, item.name);
+                    }, index * 500);
+                });
+            };
+            
+            img.onerror = function() {
+                document.getElementById('status').innerHTML = 
+                    '<span style="color: #ff4444;">❌ Error: Could not load images/me.jpeg<br>Make sure the file exists!</span>';
+            };
+            
+            img.src = 'images/me.jpeg';
+        }
+
+        function generateRoundedFavicon(img, size, filename) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = size;
+            canvas.height = size;
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Save context
+            ctx.save();
+            
+            // Create circular clipping path
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.clip();
+            
+            // Draw image
+            ctx.drawImage(img, 0, 0, size, size);
+            
+            // Restore context
+            ctx.restore();
+            
+            // Show preview for 32x32
+            if (size === 32) {
+                const previewImg = document.createElement('img');
+                previewImg.src = canvas.toDataURL('image/png');
+                previewImg.width = 64;
+                previewImg.height = 64;
+                document.getElementById('preview').innerHTML = '<p>Preview (32x32):</p>';
+                document.getElementById('preview').appendChild(previewImg);
+            }
+            
+            // Convert to blob and download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.download = filename;
+                link.href = url;
+                link.click();
+                URL.revokeObjectURL(url);
+                
+                generatedCount++;
+                
+                const statusDiv = document.getElementById('status');
+                statusDiv.innerHTML += `✅ Downloaded: ${filename}<br>`;
+                
+                if (generatedCount === sizes.length) {
+                    statusDiv.innerHTML += '<br><strong style="color: #4ade80;">🎉 All done! Now:</strong><br>';
+                    statusDiv.innerHTML += '1. Find the downloaded PNG files<br>';
+                    statusDiv.innerHTML += '2. Move them to the <strong>favicon_io</strong> folder<br>';
+                    statusDiv.innerHTML += '3. Replace the existing files<br>';
+                    statusDiv.innerHTML += '4. Refresh your browser (Ctrl+F5)';
+                }
+            }, 'image/png');
+        }
+    </script>
+</body>
+</html>
