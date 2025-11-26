@@ -2781,19 +2781,31 @@
         submitBtn.disabled = true;
         submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
 
+        // Get form values
+        const templateParams = {
+          from_name: document.getElementById('name').value,
+          from_email: document.getElementById('email').value,
+          subject: document.getElementById('subject').value,
+          message: document.getElementById('message').value,
+          to_name: 'Pradip Khanal'
+        };
+
+        console.log('Sending email with params:', templateParams);
+
         // Send email using EmailJS
-        emailjs.sendForm(
+        emailjs.send(
           'service_d2mdkv8',      // Your service ID
           'template_299o2fp',     // Your template ID
-          contactForm
+          templateParams
         )
-        .then(() => {
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
           showNotification('Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
           contactForm.reset();
         })
         .catch((error) => {
-          console.error('EmailJS Error:', error);
-          showNotification('Oops! Something went wrong. Please try again later.', 'error');
+          console.error('FAILED...', error);
+          showNotification('Oops! Something went wrong: ' + error.text || error.message, 'error');
         })
         .finally(() => {
           buttonText.classList.remove('hidden');
