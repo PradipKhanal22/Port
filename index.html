@@ -45,6 +45,13 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("MO5ifjBlT2g0ZjJSx"); // Your public key
+    })();
+  </script>
   <style>
     :root {
       --primary-color: #ea580c;
@@ -2337,10 +2344,7 @@
               </p>
             </div>
 
-            <form action="https://formspree.io/f/mjkakwll" method="POST" id="contactForm" class="space-y-8">
-              <!-- Hidden field to specify recipient email -->
-              <input type="hidden" name="_replyto" value="khanalpradip74@gmail.com">
-              <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
+            <form id="contactForm" class="space-y-8">
 
               <!-- Name and Email Row -->
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -2348,14 +2352,14 @@
                   <label class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
                     <i class="fas fa-user mr-2 text-[#ea580c]"></i>Full Name
                   </label>
-                  <input type="text" id="name" name="name" placeholder="Enter your full name" required
+                  <input type="text" id="name" name="from_name" placeholder="Enter your full name" required
                     class="professional-input w-full px-6 py-4 rounded-2xl text-white placeholder-gray-400 text-lg">
                 </div>
                 <div class="fade-in-up" style="animation-delay: 0.5s;">
                   <label class="block text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
                     <i class="fas fa-envelope mr-2 text-[#ea580c]"></i>Email Address
                   </label>
-                  <input type="email" id="email" name="email" placeholder="Enter your email address" required
+                  <input type="email" id="email" name="from_email" placeholder="Enter your email address" required
                     class="professional-input w-full px-6 py-4 rounded-2xl text-white placeholder-gray-400 text-lg">
                 </div>
               </div>
@@ -2761,14 +2765,14 @@
       });
     });
 
-    // Contact Form Handling
+    // Contact Form Handling with EmailJS
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const buttonText = document.getElementById('buttonText');
     const loadingText = document.getElementById('loadingText');
 
     if (contactForm) {
-      contactForm.addEventListener('submit', async (e) => {
+      contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
         // Show loading state
@@ -2777,29 +2781,26 @@
         submitBtn.disabled = true;
         submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
 
-        const formData = new FormData(contactForm);
-
-        try {
-          const response = await fetch(contactForm.action, {
-            method: contactForm.method,
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-          });
-
-          if (response.ok) {
-            showNotification('Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
-            contactForm.reset();
-          } else {
-            showNotification('Oops! Something went wrong. Please try again later.', 'error');
-          }
-        } catch (error) {
-          showNotification('Oops! Something went wrong. Please try again.', 'error');
-        } finally {
+        // Send email using EmailJS
+        emailjs.sendForm(
+          'service_d2mdkv8',      // Your service ID
+          'template_299o2fp',     // Your template ID
+          contactForm
+        )
+        .then(() => {
+          showNotification('Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
+          contactForm.reset();
+        })
+        .catch((error) => {
+          console.error('EmailJS Error:', error);
+          showNotification('Oops! Something went wrong. Please try again later.', 'error');
+        })
+        .finally(() => {
           buttonText.classList.remove('hidden');
           loadingText.classList.add('hidden');
           submitBtn.disabled = false;
           submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-        }
+        });
       });
     }
 
