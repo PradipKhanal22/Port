@@ -54,7 +54,7 @@ const About = () => {
                 whileHover={{ scale: 1.02 }}
               >
                 <motion.img
-                  src="./images/me2.jpg"
+                  src="/images/me2.jpg"
                   alt="About Pradip"
                   className="w-full h-auto rounded-2xl object-cover"
                   whileHover={{ scale: 1.05 }}
@@ -141,7 +141,7 @@ const About = () => {
             {/* Download CV Button */}
             <motion.div variants={itemVariants}>
               <motion.a
-                href="./Pradip_Khanal_CV (1).pdf"
+                href="/Pradip_Khanal_CV (1).pdf"
                 download="Pradip_Khanal_CV"
                 className="btn-primary inline-flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
