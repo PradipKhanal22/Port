@@ -23,7 +23,7 @@ const Contact = ({ prefilledMessage, setPrefilledMessage }) => {
   const contactInfo = [
     { icon: FiMail, label: 'Email', value: 'khanalpradip66@gmail.com', href: 'mailto:khanalpradip66@gmail.com' },
     { icon: FiPhone, label: 'Phone', value: '+977 9804453481', href: 'tel:+977 9804453481' },
-    { icon: FiMapPin, label: 'Location', value: 'Nawalpur, Nepal', href: '#' },
+    { icon: FiMapPin, label: 'Location', value: 'Kawasoti-09, Nawalpur, Gandaki Province, Nepal', href: '#' },
   ];
 
   const handleChange = (e) => {
@@ -39,7 +39,7 @@ const Contact = ({ prefilledMessage, setPrefilledMessage }) => {
     setError(null);
 
     // Note: User needs to replace these with their own EmailJS credentials
-    const SERVICE_ID = 'service_id'; 
+    const SERVICE_ID = 'service_id';
     const TEMPLATE_ID = 'template_id';
     const PUBLIC_KEY = 'public_key';
 

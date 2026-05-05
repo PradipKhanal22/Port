@@ -106,7 +106,7 @@ const About = () => {
             >
               <div className="card p-4">
                 <p className="text-gray-400 text-sm">📍 <span className="text-white font-semibold">Location</span></p>
-                <p className="text-gray-300">Nawalpur, Nepal</p>
+                <p className="text-gray-300">Kawasoti-09, Nawalpur, Gandaki Province, Nepal</p>
               </div>
               <div className="card p-4">
                 <p className="text-gray-400 text-sm">✉️ <span className="text-white font-semibold">Email</span></p>
