@@ -56,13 +56,15 @@ const Navbar = ({ isDark, setIsDark }) => {
                 smooth={true}
                 offset={-100}
                 duration={500}
+                activeClass="nav-active"
+                className="relative group"
               >
                 <motion.span
-                  className="text-gray-300 hover:text-accent-orange cursor-pointer transition-colors duration-300 relative group"
+                  className="text-gray-300 hover:text-accent-orange cursor-pointer transition-colors duration-300 relative"
                   whileHover={{ color: '#ff6b35' }}
                 >
                   {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-orange to-accent-pink group-hover:w-full transition-all duration-300" />
+                  <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-gradient-to-r from-accent-orange to-accent-pink group-[.nav-active]:w-full group-hover:w-full transition-all duration-300" />
                 </motion.span>
               </Link>
             ))}
@@ -120,10 +122,11 @@ const Navbar = ({ isDark, setIsDark }) => {
                 smooth={true}
                 offset={-100}
                 duration={500}
+                activeClass="nav-active-mobile"
                 onClick={() => setIsOpen(false)}
               >
                 <motion.div
-                  className="px-4 py-2 text-gray-300 hover:text-accent-orange hover:bg-dark-secondary/30 rounded-lg cursor-pointer transition-colors"
+                  className="px-4 py-2 text-gray-300 hover:text-accent-orange hover:bg-dark-secondary/30 rounded-lg cursor-pointer transition-colors nav-link-mobile"
                   whileHover={{ paddingLeft: 20 }}
                 >
                   {item.label}

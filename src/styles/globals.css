@@ -107,6 +107,15 @@
   ::-webkit-scrollbar-thumb {
     @apply bg-accent-orange rounded-full hover:bg-accent-orange-light;
   }
+
+  /* Active Navigation Links */
+  .nav-active span {
+    @apply text-accent-orange !important;
+  }
+
+  .nav-active-mobile div {
+    @apply text-accent-orange bg-dark-secondary/50 !important;
+  }
 }
 
 @layer utilities {

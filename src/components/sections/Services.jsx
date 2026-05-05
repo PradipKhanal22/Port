@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiCode, FiEdit3, FiTarget, FiTrendingUp, FiSettings, FiUsers } from 'react-icons/fi';
+import { FiCode, FiEdit3, FiTarget, FiTrendingUp, FiSettings, FiUsers, FiArrowRight } from 'react-icons/fi';
+import { Link } from 'react-scroll';
 
-const Services = () => {
+const Services = ({ setPrefilledMessage }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -76,7 +77,7 @@ const Services = () => {
 
           {/* Features */}
           <div className="pt-4 border-t border-dark-border">
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-4">
               {service.features.map((feature, i) => (
                 <motion.span
                   key={i}
@@ -87,6 +88,23 @@ const Services = () => {
                 </motion.span>
               ))}
             </div>
+
+            {/* Action Link */}
+            <Link 
+              to="contact" 
+              spy 
+              smooth 
+              offset={-100} 
+              duration={500}
+              onClick={() => setPrefilledMessage(`Hi Pradip, I'm interested in your ${service.title} service. Let's discuss!`)}
+            >
+              <motion.button
+                className="flex items-center gap-2 text-sm text-accent-orange hover:gap-3 transition-all font-semibold"
+                whileHover={{ x: 5 }}
+              >
+                Inquire Now <FiArrowRight />
+              </motion.button>
+            </Link>
           </div>
         </div>
       </motion.div>

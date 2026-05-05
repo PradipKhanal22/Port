@@ -11,10 +11,13 @@ import Contact from './components/sections/Contact';
 import Footer from './components/Footer';
 import FloatingElements from './components/effects/FloatingElements';
 import CursorGlow from './components/effects/CursorGlow';
+import ScrollToTop from './components/effects/ScrollToTop';
+import SocialFAB from './components/effects/SocialFAB';
 import './styles/globals.css';
 
 export default function App() {
   const [isDark, setIsDark] = useState(true);
+  const [prefilledMessage, setPrefilledMessage] = useState('');
 
   useEffect(() => {
     if (!isDark) {
@@ -28,16 +31,18 @@ export default function App() {
     <div className="min-h-screen bg-dark-primary overflow-x-hidden">
       <CursorGlow />
       <FloatingElements />
+      <ScrollToTop />
+      <SocialFAB />
       <Navbar isDark={isDark} setIsDark={setIsDark} />
       <main>
         <Hero />
         <Stats />
+        <About />
         <Skills />
         <Projects />
-        <Services />
-        <About />
+        <Services setPrefilledMessage={setPrefilledMessage} />
         <Testimonials />
-        <Contact />
+        <Contact prefilledMessage={prefilledMessage} setPrefilledMessage={setPrefilledMessage} />
       </main>
       <Footer />
     </div>

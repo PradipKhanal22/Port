@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
+import emailjs from 'emailjs-com';
 
-const Contact = () => {
+const Contact = ({ prefilledMessage, setPrefilledMessage }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if (prefilledMessage) {
+      setFormData((prev) => ({ ...prev, message: prefilledMessage }));
+      // Clear it after setting so it doesn't persist if the user navigates away and back
+      setPrefilledMessage('');
+    }
+  }, [prefilledMessage, setPrefilledMessage]);
 
   const contactInfo = [
     { icon: FiMail, label: 'Email', value: 'khanalpradip66@gmail.com', href: 'mailto:khanalpradip66@gmail.com' },
@@ -24,13 +35,38 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 3000);
+    setIsLoading(true);
+    setError(null);
+
+    // Note: User needs to replace these with their own EmailJS credentials
+    const SERVICE_ID = 'service_id'; 
+    const TEMPLATE_ID = 'template_id';
+    const PUBLIC_KEY = 'public_key';
+
+    emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_name: 'Pradip Khanal',
+      },
+      PUBLIC_KEY
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setIsSubmitted(false), 5000);
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        setError('Something went wrong. Please try again or contact me directly via email.');
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const containerVariants = {
@@ -203,15 +239,36 @@ const Contact = () => {
               </motion.div>
             )}
 
+            {/* Error Message */}
+            {error && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-sm"
+              >
+                {error}
+              </motion.div>
+            )}
+
             {/* Submit Button */}
             <motion.button
               variants={itemVariants}
               type="submit"
-              className="btn-primary w-full flex items-center justify-center gap-2"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              disabled={isLoading}
+              className={`btn-primary w-full flex items-center justify-center gap-2 ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
+              whileHover={!isLoading ? { scale: 1.02 } : {}}
+              whileTap={!isLoading ? { scale: 0.98 } : {}}
             >
-              <FiSend /> Send Message
+              {isLoading ? (
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  Sending...
+                </div>
+              ) : (
+                <>
+                  <FiSend /> Send Message
+                </>
+              )}
             </motion.button>
 
             {/* Additional Info */}

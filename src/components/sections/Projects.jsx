@@ -2,11 +2,19 @@ import React, { useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiExternalLink, FiGithub, FiEye } from 'react-icons/fi';
+import ProjectModal from '../ProjectModal';
 
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [hoveredProject, setHoveredProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openProject = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
 
   const projects = [
     {
@@ -78,6 +86,7 @@ const Projects = () => {
         whileHover={{ y: -15 }}
         onMouseEnter={() => setHoveredProject(project.id)}
         onMouseLeave={() => setHoveredProject(null)}
+        onClick={() => openProject(project)}
       >
         {/* Card Container */}
         <div className="glass-dark overflow-hidden rounded-2xl aspect-video md:aspect-square lg:aspect-video">
@@ -214,6 +223,12 @@ const Projects = () => {
           </motion.button>
         </motion.div>
       </div>
+
+      <ProjectModal 
+        project={selectedProject} 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </section>
   );
 };
