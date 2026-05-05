@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiCode, FiEdit3, FiTarget, FiTrendingUp, FiSettings, FiUsers, FiArrowRight } from 'react-icons/fi';

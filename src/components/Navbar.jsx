@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiCode, FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi';
 import { Link } from 'react-scroll';
@@ -98,7 +98,7 @@ const Navbar = ({ isDark, setIsDark }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Let's Talk
+              Let&apos;s Talk
             </motion.a>
           </div>
         </div>

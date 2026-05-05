@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiChevronLeft, FiChevronRight, FiStar } from 'react-icons/fi';
@@ -93,7 +93,7 @@ const Testimonials = () => {
 
                 {/* Quote */}
                 <p className="text-gray-300 mb-6 italic leading-relaxed">
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
 
                 {/* Author */}

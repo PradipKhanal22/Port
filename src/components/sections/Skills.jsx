@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiLayers, FiZap, FiMessageSquare, FiClock } from 'react-icons/fi';

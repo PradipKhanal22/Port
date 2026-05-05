@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiDownload } from 'react-icons/fi';
@@ -94,7 +93,7 @@ const About = () => {
               variants={itemVariants}
               className="text-lg text-gray-400 leading-relaxed"
             >
-              I'm Pradip Khanal, a passionate web developer from Nepal with over 2 years of hands-on experience
+              I&apos;m Pradip Khanal, a passionate web developer from Nepal with over 2 years of hands-on experience
               crafting modern, responsive websites and dynamic web applications. My expertise spans both front-end
               and back-end development, allowing me to deliver seamless, full-stack solutions.
             </motion.p>

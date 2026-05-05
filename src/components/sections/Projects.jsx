@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiExternalLink, FiGithub, FiEye } from 'react-icons/fi';
+import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import ProjectModal from '../ProjectModal';
 
 const Projects = () => {

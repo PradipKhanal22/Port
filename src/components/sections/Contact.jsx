@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 import emailjs from 'emailjs-com';
 
 const Contact = ({ prefilledMessage, setPrefilledMessage }) => {
@@ -113,7 +112,7 @@ const Contact = ({ prefilledMessage, setPrefilledMessage }) => {
             variants={containerVariants}
           >
             <motion.p variants={itemVariants} className="text-gray-400 text-lg leading-relaxed">
-              Have a project in mind or want to discuss potential opportunities? I'd love to hear from you. Feel free to
+              Have a project in mind or want to discuss potential opportunities? I&apos;d love to hear from you. Feel free to
               reach out through any of the channels below.
             </motion.p>
 
@@ -235,7 +234,7 @@ const Contact = ({ prefilledMessage, setPrefilledMessage }) => {
                 animate={{ opacity: 1, y: 0 }}
                 className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400"
               >
-                ✓ Message sent successfully! I'll get back to you soon.
+                ✓ Message sent successfully! I&apos;ll get back to you soon.
               </motion.div>
             )}
 

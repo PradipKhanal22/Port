@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { Link } from 'react-scroll';
@@ -99,7 +99,7 @@ const Hero = () => {
             {/* Main Title */}
             <motion.div variants={itemVariants} className="space-y-3">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-                I'm <span className="gradient-text">Pradip Khanal</span>
+                I&apos;m <span className="gradient-text">Pradip Khanal</span>
               </h1>
               <h2 className="text-2xl md:text-3xl lg:text-4xl text-gray-300">
                 <span className="gradient-text-sm">{displayText}</span>
